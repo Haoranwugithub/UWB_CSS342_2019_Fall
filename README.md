@@ -19,5 +19,25 @@ Upon successful completion of the course, students shall be able to:
 - Implement solutions proficiently in C++ with STL (Standard Template Library)
 - Write well-structured and test-friendly codes
 - Write solid testing with popular testing frameworks such as Googletest
-- Debug programs with command line and IDE tools
+- Debug programs with command line and IDE tools, and online community like https://stackoverflow.com/
 - Work comfortably with source control and online repo such as Git and github.com
+
+## Class Communication
+- Canvas Learning Management System (LMS) will be used for announcements, discussion forums, assignment posting and submissions, and individual grades. Please visit the Canvas Site to access the Canvas page for this class.
+- For any direct/individual communication with your instructor please use email (please do not use Canvas messaging/mail).
+- For group discussion, please use disco/zoom/slacker
+
+## Grading
+### Coursework Distribution 
+| Course Work | Grading % |
+|-------------|-----------|
+| Assignments | 35        |
+| Qizzes      | 20        |
+| Exam 1      | 15        |
+| Exam 2      | 15        |
+| Labs and in-class work | 10 |
+| Participation | 5 |
+| Total | 100 |
+
+### Grading Rubric
+All grades will be listed as percentages in the Canvas LMS. The conversion table below will help you determine your final grade. For example, if you earn 950 points (or 95%) you will get a 4.0. If you earn 750 points (or 75%) you will earn a 2.0. 
