@@ -56,3 +56,24 @@ All grades will be listed as percentages in the Canvas LMS. The conversion table
 
 - Data Structure
   - [Data Structures and Algorithm Analysis in C++, Third Edition (Dover Books on Computer Science)](https://www.amazon.com/Structures-Algorithm-Analysis-Computer-Science/dp/048648582X/ref=sr_1_4?keywords=data+structure+c%2B%2B&qid=1569107841&s=books&sr=1-4)
+
+## Lecture
+- Read the relevant textbook chapters before coming to class 
+- Slides are to provide outlines for the lecture, and they will be frequently updated even after the class. The main purpose of lecture slides is to give you the flow of the day's lecture
+- It is highly recommended that you take notes rather than depend solely on the slides
+- There will be live coding and debugging by both the lectuer and students
+
+## Class Attendance
+- Class attendance is not mandatory. However, I strongly encourage you to come to class as there is generally a direct correlation between attendance and performance (aka, grade)
+- Quizzes and exams will be given during class
+- You will be held responsible for learning all material covered in class, regardless of its presence (or lack thereof) in the textbook or Web Site
+
+## Programming Assignments
+All programming assignments will be submitted via UW canvas unless specified otherwise. Late assignments will **NOT** be accepted unless there has been previous agreement due to exceptional circumstances. 
+
+The program is graded upon the follow aspects: 
+
+- Style / Syntax: i.e. following Coding Guidelines; Clarity 
+- Factoring / Design: i.e. Modularity; Interface Design 
+- Correctness – determined through test cases and memory checker run against code 
+- Efficiency
