@@ -41,3 +41,18 @@ Upon successful completion of the course, students shall be able to:
 
 ### Grading Rubric
 All grades will be listed as percentages in the Canvas LMS. The conversion table below will help you determine your final grade. For example, if you earn 950 points (or 95%) you will get a 4.0. If you earn 750 points (or 75%) you will earn a 2.0. 
+
+![Image of Grading Rubric](https://github.com/pdgetrf/UWB_CSS342_2019_Fall/blob/master/images/gradingrubric.png)
+
+## Textbooks
+### Required
+- Data Abstraction & Problem Solving With C++: Walls & Mirrors, Sixth Edition, Frank M. Carrano, Addison Wesley, 2013, ISBN-10: 0132923726, ISBN-13: 978-0132923729 
+- [An Active Introduction to Discrete Mathematics and Algorithms, Charles Cusack, David Santos, GNU Free Software, 2014](https://cusack.hope.edu/Notes/Notes/Books/Active%20Introduction%20to%20Discrete%20Mathematics%20and%20Algorithms/ActiveIntroToDiscreteMathAndAlgorithms.2.6.3.pdf)
+
+### Optional
+- C++
+  - [A Tour of C++ (2nd Edition) (C++ In-Depth Series)](https://www.amazon.com/Tour-2nd-Depth-Bjarne-Stroustrup/dp/0134997832/ref=zg_bs_9045760011_1?_encoding=UTF8&psc=1&refRID=NBRBVSJH9JQK0Y6WFGVP)
+  - [C++ Primer (5th Edition)](https://www.amazon.com/Primer-5th-Stanley-B-Lippman/dp/0321714113/ref=zg_bs_9045760011_7?_encoding=UTF8&psc=1&refRID=NBRBVSJH9JQK0Y6WFGVP)
+
+- Data Structure
+  - [Data Structures and Algorithm Analysis in C++, Third Edition (Dover Books on Computer Science)](https://www.amazon.com/Structures-Algorithm-Analysis-Computer-Science/dp/048648582X/ref=sr_1_4?keywords=data+structure+c%2B%2B&qid=1569107841&s=books&sr=1-4)
