@@ -1,7 +1,7 @@
 # CSS 342 Data Structures, Algorithms, and Discrete Mathematics I
 
 ## Course Info
-This course is designed as a fast-paced course along with CSS 343, in order to prepare students for more advanced level CSS courses. This course is integrating mathematical principles with detailed instruction in computer programming. We will Explore mathematical reasoning and discrete structures through object-oriented programming. Topics include algorithm analysis, basic abstract data types, and data structures.
+This course is designed as a fast-paced course along with CSS 343, in order to prepare students for more advanced level CSS courses. This course is integrating mathematical principles with detailed instruction in computer programming. We will Explore mathematical reasoning and discrete structures through object-oriented programming. Topics include algorithm analysis, basic abstract data types, and data structures. 
 
 | Key Info ||
 |------------|-----------------|
@@ -39,8 +39,8 @@ Upon successful completion of the course, students shall be able to:
 |-------------|-----------|
 | Assignments | 35        |
 | Qizzes      | 20        |
-| Exam 1      | 15        |
-| Exam 2      | 15        |
+| Midterm exam       | 15        |
+| Final exam      | 15        |
 | Labs and in-class work | 10 |
 | Participation | 5 |
 | Total | 100 |
@@ -87,6 +87,22 @@ The program is graded upon the follow aspects:
 You can use any IDE or editor for coding and testing your laboratory and programming assignments. Regardless of what environment and version you use to develop your programs, it should be compiled with g++ and executed on a Linux operating system for grading.  If your program does not compile or does not run in the graded environments it will be deemed incorrect and receive zero points. This is true even if it works with others OS's or compilers. This means that *if you use a different development environment you should port and test your code to the prescribed environment before submitting it*. The Linux lab is available for this purpose if you do not have a prescribed local development environment. 
 
 When multiple files are required for an assignment, they must be in a a ZIP file. The ZIP file should contains source code (in ASCII Text) and results of the program (report as a MS word or pdf document); never submit executables. Please check each homework specification about what you to write in your report. For grading correctness the files will be extracted from the ZIP file, the code will be compiled and tested by executing several test cases. 
+
+## Tentative Schedule
+|  Date | Week | Topics | Chapters | Notes |
+| --- | --- | --- | --- | --- |
+|  09/26 | 1 | Course intro<br/>C++ review [pointer, refernece, memory allocation]<br/>Testing basics<br/>Debugging basics (gdb, IDE)<br/>Git basics<br/>Dev environment setup [makefile, IDE] | C++ ch 1, ch interlue 2, apendx A & B | homework 1 assigned |
+|  10/1, 10/3 | 2 | C++ review cont. [object, struct, class [constructors, relationship, polymorphism, virtual class, template]]<br/>Unit testing with Googletest<br/>cmake<br/>sorting (selection, bubble, insertion)<br/>Data structure basics<br/>C++ Standard Template Library (STL) | C++ ch interlude {1, 5, 6, 8},  ch {3, 4 & 11} | homework 1 due<br/>homework 2 assigned |
+|  10/8, 10/10 | 3 | Linked list<br/>Iterator<br/>Sorted list | C++ ch {8, 9, 12} | homework 2 due<br/>homework 3 assigned |
+|  10/15, 10/17 | 4 | Stack<br/>Queue<br/>Priority Queue | C++ ch {6, 7, 13, 14} | homework 3 due<br/>homework 4 assigned |
+|  10/22, 10/24 | 5 | Recursion<br/>Back tracking | C++ ch 5, Math {8.2, 8.3, 8.4} | homework 4 due<br/>homework 5 assigned |
+|  10/29, 10/31 | 6 | Midterm<br/>Guest lecture |  | homework 5 due |
+|  11/5, 11/7 | 7 | Tree<br/>Binary search tree<br/>Balanced search tree | C++ ch {15, 16, 19} | homework 6 assigned |
+|  11/12, 11/14 | 8 | Algorithm efficiency<br/>Hashtable<br/>Heap | C++ ch {10, 17 & 18}, Math {7} | homework 6 due<br/>homework 7 assigned |
+|  11/19, 11/21 | 9 | Faster sorting (binary, merge, quick)<br/>Induction | C++ ch 11, Math {8.1} | homework 7 due<br/>homework 8 assigned |
+|  11/26, 11/28 | 10 | Graph<br/>Thanksgiving |  | homework 8 due<br/>homework 9 assigned |
+|  12/3, 12/5 | 11 | Review/Buffer |  | homework 9 due |
+|  12/10 | 12 | **Final** |  |  |
 
 ## Policy
 All the materials are either in class, or online. In-class only materials will be unavailable unless you attend class. The only exceptions are: you are terribly sick, family emergency, or academic event. In such cases, you should provide evidence (e.g., medical doctor’s note). 
