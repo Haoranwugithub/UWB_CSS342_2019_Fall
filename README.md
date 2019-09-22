@@ -6,7 +6,7 @@ This course is designed as a fast-paced course along with CSS 343, in order to p
 | Key Info ||
 |------------|-----------------|
 | Date & Time | TTh 8pm - 10pm |
-| Lecturer     | Dr. Peng Du    |
+| Lecturer     | Dr. [Peng Du](https://www.linkedin.com/in/peng-du-ph-d-14b0a11b)    |
 | Lecture Location | UW1([map](https://www.google.com/maps/place/UW1,+Campus+Way+NE,+Bothell,+WA+98011/@47.7589141,-122.1927826,17z/data=!3m1!4b1!4m5!3m4!1s0x54900e656ea5e705:0x76bf30aa903fd5d4!8m2!3d47.7589141!4d-122.1905939)) 021   |
 
 ## Prerequisites
