@@ -10,7 +10,7 @@ This course is designed as a fast-paced course along with CSS 343, in order to p
 | Lecture Location | UW1([map](https://www.google.com/maps/place/UW1,+Campus+Way+NE,+Bothell,+WA+98011/@47.7589141,-122.1927826,17z/data=!3m1!4b1!4m5!3m4!1s0x54900e656ea5e705:0x76bf30aa903fd5d4!8m2!3d47.7589141!4d-122.1905939)) 021   |
 
 ## Prerequisites
-a minimum grade of 2.8 in either CSS 133, CSS 143, CSE 143, or CSS 162; and minimum grade of 2.5 in either STMATH 125 or MATH 125.
+A minimum grade of 2.8 in either CSS 133, CSS 143, CSE 143, or CSS 162; and minimum grade of 2.5 in either STMATH 125 or MATH 125.
 
 ## Course Objectives
 The objectives of this course are for students to: 
