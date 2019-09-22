@@ -37,7 +37,7 @@ Upon successful completion of the course, students shall be able to:
 ### Coursework Distribution 
 | Course Work | Grading % |
 |-------------|-----------|
-| Assignments | 35        |
+| Homeworks | 35        |
 | Qizzes      | 20        |
 | Midterm exam       | 15        |
 | Final exam      | 15        |
