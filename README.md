@@ -21,7 +21,7 @@ The objectives of this course are for students to:
 ## Course Learning Outcomes
 Upon successful completion of the course, students shall be able to:
 - Analyze problem and design solutions with basic data structures, algorithms.
-- Make trade of between solutions based on performance analysic in terms of time and space complexity.
+- Make trade off between solutions based on performance analysic in terms of time and space complexity.
 - Implement solutions proficiently in C++ with STL (Standard Template Library).
 - Write well-structured and test-friendly codes.
 - Write solid testing with popular testing frameworks such as Googletest.
