@@ -96,7 +96,7 @@ When multiple files are required for an assignment, they must be in a a ZIP file
 |  10/8, 10/10 | 3 | Linked list<br/>Iterator<br/>Sorted list | C++ ch {8, 9, 12} | homework 2 due<br/>homework 3 assigned |
 |  10/15, 10/17 | 4 | Stack<br/>Queue<br/>Priority Queue | C++ ch {6, 7, 13, 14} | homework 3 due<br/>homework 4 assigned |
 |  10/22, 10/24 | 5 | Recursion<br/>Back tracking | C++ ch 5, Math {8.2, 8.3, 8.4} | homework 4 due<br/>homework 5 assigned |
-|  10/29, 10/31 | 6 | Midterm<br/>Guest lecture |  | homework 5 due |
+|  10/29, 10/31 | 6 | **Midterm**<br/>Guest lecture |  | homework 5 due |
 |  11/5, 11/7 | 7 | Tree<br/>Binary search tree<br/>Balanced search tree | C++ ch {15, 16, 19} | homework 6 assigned |
 |  11/12, 11/14 | 8 | Algorithm efficiency<br/>Hashtable<br/>Heap | C++ ch {10, 17 & 18}, Math {7} | homework 6 due<br/>homework 7 assigned |
 |  11/19, 11/21 | 9 | Faster sorting (binary, merge, quick)<br/>Induction | C++ ch 11, Math {8.1} | homework 7 due<br/>homework 8 assigned |
