@@ -89,6 +89,8 @@ You can use any IDE or editor for coding and testing your laboratory and program
 When multiple files are required for an assignment, they must be in a a ZIP file. The ZIP file should contains source code (in ASCII Text) and results of the program (report as a MS word or pdf document); never submit executables. Please check each homework specification about what you to write in your report. For grading correctness the files will be extracted from the ZIP file, the code will be compiled and tested by executing several test cases. 
 
 ## Tentative Schedule
+The following table provides approximate, high-level ordering of topics, not all sections in all chapters in the book are covered.  It is also a tentative schedule subject to change, and will be announced on canvas, in class and/or through our discussion channels. Furthermore, the book topics listed below are provided as guidance. You are strongly encouraged to consult other sources for further references.
+
 |  Date | Week | Topics | Chapters | Notes |
 | --- | --- | --- | --- | --- |
 |  09/26 | 1 | Course intro<br/>C++ review [pointer, refernece, memory allocation]<br/>Testing basics<br/>Debugging basics (gdb, IDE)<br/>Git basics<br/>Dev environment setup [makefile, IDE] | C++ ch 1, ch interlue 2, apendx A & B | homework 1 assigned |
