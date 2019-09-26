@@ -63,7 +63,7 @@ Modify *build.sh* to include **test.cpp**, and *build.sh* should still compile t
     //  output: [1, 2, 3, 4, 4, 5]
     virtual void sort() = 0;
 ```
-Any method to sort an array can be used, even bubble sort. You will **NOT** be scored based on algorithm performance, only on correctness. Write tests as thourough as possible. Result must be *in-place* as in taking effect on the same object.
+Any method to sort an array can be used, even bubble sort. You will **NOT** be scored based on algorithm performance, only on correctness. Write tests as thourough as possible. Result must be *in-place* as in taking effect on the same array object from test input.
 
  
 4. (25pt) Implement **reverse()** and **testReverse()**
