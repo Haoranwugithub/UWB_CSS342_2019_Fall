@@ -72,4 +72,4 @@ Any method to sort an array can be used, even bubble sort. You will **NOT** be s
 ```
 Any method to reverse an array can be used. You will **NOT** be scored based on algorithm performance, only on correctness. Write tests as thourough as possible. Result must be *in-place* as in taking effect on the same object.
 
-5. (10pt) Bonus: Implement **reverse()** without additional memory space of the same array size. This means *reverse()* work in-place and does not allocate another array of the same size when working.
+5. (10pt) Bonus: Implement **reverse()** without additional memory space of the same array size. This means *reverse()* work in-place and does not allocate (*new* or *malloc*) another array of the same size when working.
