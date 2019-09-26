@@ -1,8 +1,8 @@
 * Info:
-- Assigned: 09/26/2019
-- Due: 10/4/2019 11:59pm
-- Submission via Canvas
-- Your code will be graded on my Ubuntu Linux. Make sure your code works on this platform, and convert if necessary if you code on another platform like Windows, **before** submitting your work.
+    - Assigned: 09/26/2019
+    - Due: 10/4/2019 11:59pm
+    - Submission via Canvas
+    - Your code will be graded on my Ubuntu Linux. Make sure your code works on this platform, and convert if necessary if you code on another platform like Windows, **before** submitting your work.
 
 * Check out the project using git tool. 
 
