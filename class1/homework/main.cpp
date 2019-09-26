@@ -60,11 +60,11 @@ class MyArray: public Container<T> {
         }
 
         void sort() override {
-            printf("not implemented\n");
+            printf("sort(): not implemented\n");
         }
 
         void reverse() override {
-            printf("not implemented\n");
+            printf("reverse(): not implemented\n");
         }
 };
 
@@ -108,14 +108,14 @@ void testAdd() {
  * test MyArray::sort()
  */
 void testSort() {
-    printf("not implemented\n");
+    printf("testSort(): not implemented\n");
 }
 
 /* 
  * test MyArray::reverse()
  */
 void testReverse() {
-    printf("not implemented\n");
+    printf("testReverse(): not implemented\n");
 }
 
 /*
