@@ -5,4 +5,4 @@ set -x
 
 rm main.x 
 
-g++ main.cpp -Wall -std=c++11 -o main.x
+g++ main.cpp -Wall -std=c++11 -o homework1.x

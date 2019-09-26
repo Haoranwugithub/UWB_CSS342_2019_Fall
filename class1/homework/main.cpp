@@ -45,6 +45,10 @@ class MyArray: public Container<T> {
             return size;
         }
 
+        T & operator [](int index) {
+            return data[index];
+        }
+
         void add(T & val) override {
             if (size==capacity) {
                 return;
@@ -68,11 +72,13 @@ class MyArray: public Container<T> {
 void testReverse();
 void testSort();
 void testAdd(); 
+void testSubscriptOperator();
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
     
     // run tests
+    testSubscriptOperator();
     testAdd();
     testSort();
     testReverse();
@@ -83,21 +89,19 @@ int main() {
  */
 void testAdd() {
     // create an object of MyArray
-    MyArray<int> * arr = new MyArray<int>(10);
+    MyArray<int> arr(10);
 
     // add values to the array
     for (int i = 0; i< 5; i++) {
-        arr->add(i);
+        arr.add(i);
     }
 
     // check the size of the array
-    if (arr->count()==5) {
+    if (arr.count()==5) {
         printf("testAdd: PASSED\n");
     } else {
-        printf("testAdd: FAILED, expected:%d, actual:%d\n", 5, arr->count());
+        printf("testAdd: FAILED, expected:%d, actual:%d\n", 5, arr.count());
     }
-
-    delete arr;
 }
 
 /*
@@ -112,4 +116,31 @@ void testSort() {
  */
 void testReverse() {
     printf("not implemented\n");
+}
+
+/*
+ * test MyArray::[]
+ */
+void testSubscriptOperator() {
+    // create an object of MyArray
+    MyArray<int> arr(10);
+    
+    for (int i = 0; i<5; i++) {
+        arr[i] = i;
+    }
+
+    int testCount = 5, testPassed = 0;
+    for (int i=0; i<testCount; i++) {
+        if (arr[i]!=i) {
+            break;
+        } else {
+            testPassed++; 
+        }
+    }
+
+    if (testPassed==testCount) {
+            printf("testSubscriptOperator: PASSED\n");
+    } else {
+            printf("testSubscriptOperator: FAILED\n");
+    }
 }
