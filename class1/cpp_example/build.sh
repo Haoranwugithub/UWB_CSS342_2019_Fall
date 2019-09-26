@@ -3,6 +3,6 @@
 # print out each command being executed 
 set -x
 
-rm main.x 
+rm review.x 
 
-g++ main.cpp -Wall -std=c++11 -o main.x
+g++ review.cpp -Wall -std=c++11 -o review.x
