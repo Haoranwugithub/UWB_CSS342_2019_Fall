@@ -1,4 +1,4 @@
-Info:
+* Info:
 - Assigned: 09/26/2019
 - Due: 10/4/2019 11:59pm
 - Submission via Canvas
