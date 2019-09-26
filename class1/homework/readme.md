@@ -24,7 +24,7 @@ The homework is in **UWB_CSS342_2019_Fall/class1/homework/**.
 
 * Finish the following tasks:
 
-1. Separate all tests into a separate file called **test.cpp**, this file should include the following functions:
+1. (25pt) Separate all tests into a separate file called **test.cpp**, this file should include the following functions:
 
 ```cpp
 void testReverse();
@@ -32,9 +32,10 @@ void testSort();
 void testAdd();
 ```
 
+
 Modify *build.sh* to include **test.cpp**, and *build.sh* should still compile the project correctly.
 
-2. Complete the **add()** and **testAdd()**
+2. (25pt) Complete the **add()** and **testAdd()**
 ```cpp
     // add an element to the end of the array
     virtual void add(T &val) = 0;
@@ -42,7 +43,7 @@ Modify *build.sh* to include **test.cpp**, and *build.sh* should still compile t
 
 *add()* is already partially implemented from class. Finish this task based on what's already written.
 
-3. Implement **sort()** and **testSort()**
+3. (25pt) Implement **sort()** and **testSort()**
 ```cpp
     // sort the container elements in ascending order
     // for example:
@@ -53,7 +54,7 @@ Modify *build.sh* to include **test.cpp**, and *build.sh* should still compile t
 Any method to sort an array can be used, even bubble sort. You will **NOT** be scored based on algorithm performance, only on correctness. Write tests as thourough as possible. Result must be *in-place* as in taking effect on the same object.
 
  
-4. Implement **reverse()** and **testReverse()**
+4. (25pt) Implement **reverse()** and **testReverse()**
 ```cpp
     // reverse the elements of the array backward
     // examples:
@@ -65,4 +66,4 @@ Any method to sort an array can be used, even bubble sort. You will **NOT** be s
 ```
 Any method to reverse an array can be used. You will **NOT** be scored based on algorithm performance, only on correctness. Write tests as thourough as possible. Result must be *in-place* as in taking effect on the same object.
 
-5. Bonus: Implement **reverse()** without additional memory space of the same array size. This means *reverse()* work in-place and does not allocate another array of the same size when working.
+5. (10pt) Bonus: Implement **reverse()** without additional memory space of the same array size. This means *reverse()* work in-place and does not allocate another array of the same size when working.
