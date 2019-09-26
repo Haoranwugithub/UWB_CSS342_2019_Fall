@@ -1,57 +1,115 @@
 #include <iostream>
 
 template<class T>
-class container {
+class Container {
+    // return the number of elements in the array
     virtual int count() const = 0;
+
+    // add an element to the end of the array
     virtual void add(T &val) = 0;
+
+    // sort the container elements in ascending order
+    // for example:
+    // 	input: [3, 1, 4, 5, 4, 2]
+    // 	output: [1, 2, 3, 4, 4, 5]
+    virtual void sort() = 0;
+
+    // reverse the elements of the array backward
+    // examples:
+    // 	input: [], output: []
+    // 	input: [2], output: [2]
+    // 	input: [1, 2, 1], output: [1, 2, 1]
+    // 	input: [1, 2, 3, 4, 4, 5], output: [5, 4, 4, 3, 2, 1]
+    virtual void reverse() = 0;
 };
 
 template<class T>
-class slimSet : public container<T> {
-private:
-    T * data;
-    int capacity;
-    int size;
+class MyArray: public Container<T> {
+    private:
+        T * data;
+        int capacity;
+        int size;
 
-public:
-    slimSet(int capacity) : capacity(capacity), size(0) {
-        data = new T[capacity];
-    }
-
-    virtual ~slimSet() {
-        delete []data;
-    }
-
-    int count() const override {
-        return size;
-    }
-
-    void add(T & val) override {
-        /*
-         * add val to data[]
-         */
-        if (size==capacity) {
-            exit(0);
+    public:
+        // constructor
+        MyArray(int capacity) : capacity(capacity), size(0) {
+            data = new T[capacity];
         }
-        size++;
 
-    }
+        // destructor
+        virtual ~MyArray() {
+            delete []data;
+        }
+
+        int count() const override {
+            return size;
+        }
+
+        void add(T & val) override {
+            if (size==capacity) {
+                return;
+            }
+            /*
+             * TODO: implement adding val to data[]
+             */
+            size++;
+        }
+
+        void sort() override {
+            printf("not implemented\n");
+        }
+
+        void reverse() override {
+            printf("not implemented\n");
+        }
 };
 
+//forward declaration
+void testReverse();
+void testSort();
+void testAdd(); 
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
+    
+    // run tests
+    testAdd();
+    testSort();
+    testReverse();
+}
 
-    // create an object of slimSet
-    slimSet<int> * setA = new slimSet<int>(10);
+/*
+ * test MyArray::add()
+ */
+void testAdd() {
+    // create an object of MyArray
+    MyArray<int> * arr = new MyArray<int>(10);
 
-    // add values to the set
+    // add values to the array
     for (int i = 0; i< 5; i++) {
-        setA->add(i);
+        arr->add(i);
     }
 
-    // check the size of the set
-    printf("size of the set is %d\n", setA->count());
+    // check the size of the array
+    if (arr->count()==5) {
+        printf("testAdd: PASSED\n");
+    } else {
+        printf("testAdd: FAILED, expected:%d, actual:%d\n", 5, arr->count());
+    }
 
-    return 0;
+    delete arr;
+}
+
+/*
+ * test MyArray::sort()
+ */
+void testSort() {
+    printf("not implemented\n");
+}
+
+/* 
+ * test MyArray::reverse()
+ */
+void testReverse() {
+    printf("not implemented\n");
 }
