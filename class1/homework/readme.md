@@ -2,7 +2,13 @@
     - Assigned: 09/26/2019
     - Due: 10/4/2019 Friday 11:59pm
     - Submission via Canvas
-    - Your code will be graded on my Ubuntu Linux.  **Before** submitting your work, make sure your code works on this platform especially if you code on another platform like Windows. Simple rule of judgement: If *build.sh* does not produce an executable called *homework1.x*, it **DOESN'T** compile. 
+    - Your code will be graded on my Ubuntu Linux.  **Before** submitting your work, make sure your code works on this platform especially if you code on another platform like Windows. Simple rule of judgement: If *build.sh* does not produce an executable called *homework1.x*, it **DOESN'T** compile
+    - Your work will be graded as following:
+        - compiles (10 pt): produces a binary executable called homework1.x 
+        - correct (10 pt): pass all tests, sufficient test cases
+        - style (5 pt): naming convension, clear comments, etc.
+        - bonus (10 pt): Graded following the previous 3 standards
+    
 
 * Check out the project using git tool. 
 
