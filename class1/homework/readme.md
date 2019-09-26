@@ -32,7 +32,7 @@ void testSort();
 void testAdd();
 ```
 
-Modify *build.sh* to include **test.cpp**, and *build.sh* should still compile the project.
+Modify *build.sh* to include **test.cpp**, and *build.sh* should still compile the project correctly.
 
 2. Complete the **add()** and **testAdd()**
 ```cpp
