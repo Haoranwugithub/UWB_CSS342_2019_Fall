@@ -2,7 +2,7 @@
     - Assigned: 09/26/2019
     - Due: 10/4/2019 Friday 11:59pm
     - Submission via Canvas
-    - Your code will be graded on my Ubuntu Linux. Make sure your code works on this platform, and convert if necessary if you code on another platform like Windows, **before** submitting your work.
+    - Your code will be graded on my Ubuntu Linux.  **Before** submitting your work, make sure your code works on this platform especially if you code on another platform like Windows. If *build.sh* does not produce an executable called *homework1.x*, it **DOESN'T** compile. 
 
 * Check out the project using git tool. 
 
