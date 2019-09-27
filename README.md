@@ -2,7 +2,7 @@
 
 ## How to Clone This Repo To Your Machine
 
-On the [repo front page](https://github.com/pdgetrf/UWB_CSS342_2019_Fall), click the green "Clone or download" button. You can either git clone the repo or download a zip file. Here is an example on linux/mac:
+On the [class repo page](https://github.com/pdgetrf/UWB_CSS342_2019_Fall), click the green "Clone or download" button. You can either git clone the repo or download a zip file. Here is an example on linux/mac:
 
 ```console
 pdu:~$ git clone git@github.com:pdgetrf/UWB_CSS342_2019_Fall.git
@@ -18,7 +18,7 @@ pdu:~$ cd UWB_CSS342_2019_Fall/
 pdu:~/UWB_CSS342_2019_Fall$ ls
 README.md class1    images
 ```
-And there's a [tutorial](https://help.github.com/en/articles/cloning-a-repository) to how to clone a repo on **ALL PLATFORMS**. 
+And there's a [tutorial](https://help.github.com/en/articles/cloning-a-repository) to how to clone a github repo on **ALL PLATFORMS**. 
 
 ## Course Info
 This course is designed as a fast-paced course along with CSS 343, in order to prepare students for more advanced level CSS courses. This course is integrating mathematical principles with detailed instruction in computer programming. We will Explore mathematical reasoning and discrete structures through object-oriented programming. Topics include algorithm analysis, basic abstract data types, and data structures. 
