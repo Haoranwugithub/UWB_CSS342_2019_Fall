@@ -18,7 +18,7 @@ pdu:~$ cd UWB_CSS342_2019_Fall/
 pdu:~/UWB_CSS342_2019_Fall$ ls
 README.md class1    images
 ```
-And there's a [tutorial](https://help.github.com/en/articles/cloning-a-repository) to how to clone a github repo on **ALL PLATFORMS**. 
+And there's a [tutorial](https://help.github.com/en/articles/cloning-a-repository) to how to clone a github repo on **ALL PLATFORMS**. We will use git a lot in this course so clone is the "suggested way".
 
 ## Course Info
 This course is designed as a fast-paced course along with CSS 343, in order to prepare students for more advanced level CSS courses. This course is integrating mathematical principles with detailed instruction in computer programming. We will Explore mathematical reasoning and discrete structures through object-oriented programming. Topics include algorithm analysis, basic abstract data types, and data structures. 
