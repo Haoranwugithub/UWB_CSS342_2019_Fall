@@ -1,5 +1,22 @@
 # CSS 342 Data Structures, Algorithms, and Discrete Mathematics I
 
+## How to Clone This Repo To Your Machine
+
+```console
+pdu:~$ git clone git@github.com:pdgetrf/UWB_CSS342_2019_Fall.git
+Cloning into 'UWB_CSS342_2019_Fall'...
+remote: Enumerating objects: 227, done.
+remote: Counting objects: 100% (227/227), done.
+remote: Compressing objects: 100% (201/201), done.
+remote: Total 227 (delta 86), reused 91 (delta 20), pack-reused 0
+Receiving objects: 100% (227/227), 5.63 MiB | 1.07 MiB/s, done.
+Resolving deltas: 100% (86/86), done.
+pdu:~$
+pdu:~$ cd UWB_CSS342_2019_Fall/
+pdu:~/UWB_CSS342_2019_Fall$ ls
+README.md class1    images
+```
+
 ## Course Info
 This course is designed as a fast-paced course along with CSS 343, in order to prepare students for more advanced level CSS courses. This course is integrating mathematical principles with detailed instruction in computer programming. We will Explore mathematical reasoning and discrete structures through object-oriented programming. Topics include algorithm analysis, basic abstract data types, and data structures. 
 
