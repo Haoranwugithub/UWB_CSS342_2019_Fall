@@ -12,6 +12,7 @@ class Base
             cout<< "show(non-virtual) in Base class" <<endl; 
         } 
 
+        // why is this destructor virtual?
         virtual ~Base() {
             cout<< "~Base() called" <<endl; 
         }
