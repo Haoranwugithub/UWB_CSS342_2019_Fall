@@ -79,3 +79,47 @@ Any method to sort an array can be used, even bubble sort. You will **NOT** be s
 Any method to reverse an array can be used. You will **NOT** be scored based on algorithm performance, only on correctness. Write tests as thourough as possible. Result must be *in-place* as in taking effect on the same object.
 
 5. (10pt) Bonus: Implement **reverse()** without additional memory space of the same array size. This means *reverse()* work in-place and does not allocate (*new* or *malloc*) another array of the same size when working.
+
+* **What should be in your submission?**
+
+Your submission should be a zip or tar file with the following files:
+1. All the .cpp files
+2. All the .h files (hint: You might need to put class definition into this .h file)
+3. Modified build.sh
+
+You can choose the file structure as you like. And you can choose where to put your main() function. For example, it could be in test.cpp or homework1.cpp. As long as the project compiles correctly. 
+
+This is what it **could** look like:
+```console
+pdu:~/UWB_CSS342_2019_Fall/class1/homework$ ls -la
+total 40
+drwxr-xr-x  7 pdu  staff   224 Sep 29 17:23 .
+drwxr-xr-x  8 pdu  staff   256 Sep 27 11:36 ..
+-rwxr-xr-x  1 pdu  staff   189 Sep 29 17:23 build.sh
+-rw-r--r--  1 pdu  staff  1640 Sep 29 17:19 container.h
+-rw-r--r--  1 pdu  staff   291 Sep 29 17:19 homework1.cpp
+-rw-r--r--  1 pdu  staff  3425 Sep 27 11:36 readme.md
+-rw-r--r--  1 pdu  staff  1162 Sep 29 17:17 test.cpp
+pdu:~/UWB_CSS342_2019_Fall/class1/homework$
+pdu:~/UWB_CSS342_2019_Fall/class1/homework$ ./build.sh
+pdu:~/UWB_CSS342_2019_Fall/class1/homework$
+pdu:~/UWB_CSS342_2019_Fall/class1/homework$ ls
+build.sh      container.h   homework1.cpp homework1.o   homework1.x   readme.md     test.cpp      test.o
+pdu:~/UWB_CSS342_2019_Fall/class1/homework$
+pdu:~/UWB_CSS342_2019_Fall/class1/homework$ ./homework1.x
+Hello, World!
+testSubscriptOperator: PASSED
+testAdd: PASSED
+testSort(): PASSED
+testReverse(): PASSED
+```
+
+And this is what my build.sh looks like:
+```js
+#!/bin/bash
+
+g++ -c -Wall -std=c++11 test.cpp -o test.o
+g++ -c -Wall -std=c++11 homework1.cpp -o homework1.o
+g++ homework1.o test.o -o homework1.x
+```
+Your build.sh can be different to work with how you organize your files.
