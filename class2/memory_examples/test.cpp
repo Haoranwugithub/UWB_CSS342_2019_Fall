@@ -3,6 +3,7 @@
 void stack_variable()
 {
     Point point(1, 2);
+    printf("in stack_variable, size of point is %d bytes (size of int variable is %d bytes)\n", sizeof(point), sizeof(int));
     point.move(5, 6);
     point.print("in stack_variable");
     
