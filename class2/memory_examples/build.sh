@@ -2,12 +2,13 @@
 
 # print out each command being executed 
 set -x
+set -u
 
 PROJECT=test
 EXECUTABLE=$PROJECT.x
 
 rm $EXECUTABLE 
 
-FLAGS="-Wall -std=c++11" 
+FLAGS="-std=c++11" 
 
-g++ $PROJECT.cpp $FLAG -o $EXECUTABLE 
+g++ $PROJECT.cpp $FLAGS -o $EXECUTABLE 
