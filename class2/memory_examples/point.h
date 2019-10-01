@@ -30,7 +30,7 @@ public:
         if (msg==nullptr) {
             msg = "none";
         }
-        printf ("%s: point(%d, %d) @ %x\n", msg, x, y, this);
+        printf ("%s: point(%d, %d) @ 0x%x\n", msg, x, y, this);
     }
 
     int getX() {
