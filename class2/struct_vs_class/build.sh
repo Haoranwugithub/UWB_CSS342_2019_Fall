@@ -3,7 +3,7 @@
 # print out each command being executed 
 set -x
 
-PROJECT=memory_examples
+PROJECT=struct_vs_class
 EXECUTABLE=$PROJECT.x
 
 rm $EXECUTABLE 
