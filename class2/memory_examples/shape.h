@@ -3,6 +3,8 @@
 class Shape {
     int size;
     Point *points;
+	
+	// Point points[20];
 
 public:
     Shape() = delete;
@@ -21,4 +23,6 @@ public:
         }
         printf("\n");
     }
+
+	// are we missing something?
 };

@@ -5,6 +5,8 @@ void stack_variable()
     Point point(1, 2);
     point.move(5, 6);
     point.print("in stack_variable");
+    
+	// are we missing something?
 }
 
 void heap_variable()
@@ -12,6 +14,8 @@ void heap_variable()
     Point *point = new Point(1,2);
     point->move(5, 6);
     point->print("in heap_variable");
+
+    // are we missing something?
 }
 
 void heap_array(int arraySize)
@@ -25,17 +29,17 @@ void heap_array(int arraySize)
         points[i].print("in heap_array");
     }
 
-    delete [] points;
+    // are we missing something?
 }
 
 int main()
 {
-    stack_variable();
+//    stack_variable();
 
-    heap_variable();
+//    heap_variable();
 
-    heap_array(10);
+//    heap_array(10);
 
-    Shape shape(5);
-    shape.print();
+//    Shape shape(5);
+//   shape.print();
 }
