@@ -116,7 +116,7 @@ The following table provides approximate, high-level ordering of topics, not all
 |  Date | Week | Topics | Chapters | Notes |
 | --- | --- | --- | --- | --- |
 |  09/26 | 1 | Course intro<br/>C++ review [pointer, refernece, memory allocation]<br/>Testing basics<br/>Debugging basics (gdb, IDE)<br/>Git basics<br/>Dev environment setup [makefile, IDE] | C++ ch 1, ch interlue 2, apendx A & B | homework 1 assigned |
-|  10/1, 10/3 | 2 | C++ review cont. [object, struct, class [constructors, relationship, polymorphism, virtual class, template]]<br/>Unit testing with Googletest<br/>cmake<br/>Data structure basics | C++ ch interlude {1, 5, 6, 8},  ch {3, 4 & 11} | homework 1 due<br/>homework 2 assigned |
+|  10/1, 10/3 | 2 | C++ review cont. [object, struct, class [constructors, relationship, polymorphism, virtual class, template]]<br/>Unit testing with Googletest<br/>cmake<br/>OOP design | C++ ch interlude {1, 5, 6, 8},  ch {3, 4 & 11} | homework 1 due<br/>homework 2 assigned |
 |  10/8, 10/10 | 3 | Linked list<br/>Iterator<br/>Sorted list<br/>C++ Standard Template Library (STL) | C++ ch {8, 9, 12} | homework 2 due<br/>homework 3 assigned |
 |  10/15, 10/17 | 4 | Stack<br/>Queue<br/>Priority Queue | C++ ch {6, 7, 13, 14} | homework 3 due<br/>homework 4 assigned |
 |  10/22, 10/24 | 5 | sorting (selection, bubble, insertion)<br/>Recursion<br/>Back tracking | C++ ch 5, Math {8.2, 8.3, 8.4} | homework 4 due<br/>homework 5 assigned |
