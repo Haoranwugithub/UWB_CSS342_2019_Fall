@@ -24,5 +24,10 @@ public:
         printf("\n");
     }
 
+	~Shape() {
+        printf("Destructor called\n");
+		delete []points;
+	}
+
 	// are we missing something?
 };

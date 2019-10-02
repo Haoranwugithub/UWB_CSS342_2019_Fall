@@ -17,6 +17,7 @@ void heap_variable()
     point->print("in heap_variable");
 
     // are we missing something?
+	delete point;
 }
 
 void heap_array(int arraySize)
@@ -31,16 +32,17 @@ void heap_array(int arraySize)
     }
 
     // are we missing something?
+	delete []points;
 }
 
 int main()
 {
-//    stack_variable();
+//	stack_variable();
 
 //    heap_variable();
 
 //    heap_array(10);
 
-//    Shape shape(5);
-//   shape.print();
+    Shape shape(5);
+	shape.print();
 }

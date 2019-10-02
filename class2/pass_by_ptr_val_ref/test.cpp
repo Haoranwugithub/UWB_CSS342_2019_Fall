@@ -43,9 +43,9 @@ int testPassByReference()
 
 int main()
 {
-    testPassByValue();
+//    testPassByValue();
     
-    testPassByPointer();
+//    testPassByPointer();
 
-    testPassByReference();
+	testPassByReference();
 }
