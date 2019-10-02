@@ -5,7 +5,7 @@
 On the [class repo page](https://github.com/pdgetrf/UWB_CSS342_2019_Fall), click the green "Clone or download" button. You can either git clone the repo or download a zip file. Here is an example on linux/mac:
 
 ```console
-pdu:~$ git clone git@github.com:pdgetrf/UWB_CSS342_2019_Fall.git
+pdu:~$ git clone https://github.com/pdgetrf/UWB_CSS342_2019_Fall.git
 Cloning into 'UWB_CSS342_2019_Fall'...
 remote: Enumerating objects: 227, done.
 remote: Counting objects: 100% (227/227), done.
