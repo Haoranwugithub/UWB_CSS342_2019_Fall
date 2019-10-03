@@ -45,3 +45,10 @@ The homework is in **UWB_CSS342_2019_Fall/class2/homework/**.
     -  (5pt) Put your matrix class into its own files (definition in .h, implementation in .cpp).
     -  (10pt) Add unit test(s) for the Add() function in a file called test.cpp
     -  (5pt) Add Makefile to compile your matrix project
+
+5. (5pt) Bonus: Send me a private message on Discord with the following info:
+    - Your full name
+    - Your technical background briefly, specificially about C++, Linux
+    - Your goal/expection to this class
+    - Comments on the teaching/class progress/Homework so far
+    
