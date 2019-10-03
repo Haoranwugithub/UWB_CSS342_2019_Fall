@@ -28,7 +28,7 @@ The homework is in **UWB_CSS342_2019_Fall/class2/homework/**.
 3. (15pt) Use folder ```problem_3```.
     - (5pt) Write unit test(s) in test.cpp for ```T circular_card::area() ``` and ```T rectangular_card::area() ```
     - (5pt) Add a virtual function called ```perimeter()``` in the card class, and implement it for both circular_card and rectangular_card classes. perimeter() returns the length of the outline of a card. Similar to area(), perimeter() works differently in rectangular_card and circular_card.
-    - (5pt) Write unit test(s) in test.cpp for the ```perimeter()`` you added in the last part to verify it's correct. 
+    - (5pt) Write unit test(s) in test.cpp for the ```perimeter()``` you added in the last part to verify it's correct. 
 
 4. (60pt) Design and implement a class that represent a matrix with specified operations. Use folder ```problem_4```
     - A matrix is a rectangular array of numberical values.
