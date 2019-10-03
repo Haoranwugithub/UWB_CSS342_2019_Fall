@@ -9,7 +9,7 @@
        
 The homework is in **UWB_CSS342_2019_Fall/class2/homework/**. 
 
-* Finish the following tasks:
+* Finish the following problems:
 
 1. (15pt) use folder ```problem_1```.
     - (5pt) Convert your "build.sh" from your homework1 code to Makefile and it should compile your project correctly (use folder problem_1)
