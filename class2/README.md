@@ -42,6 +42,6 @@ The homework is in **UWB_CSS342_2019_Fall/class2/homework/**.
         void Add(MyMatrix & theOtherMatrix);
         ```
         This function adds the values of theOtherMatrix object to the calling matrix object following the rule of [matrix addition](https://en.wikipedia.org/wiki/Matrix_addition)
-    -  (5pt) Put your matrix class into its own files (both .h and class im.cpp).
+    -  (5pt) Put your matrix class into its own files (definition in .h, implementation in .cpp).
     -  (10pt) Add unit test(s) for the Add() function in a file called test.cpp
     -  (5pt) Add Makefile to compile your matrix project
