@@ -38,7 +38,7 @@ The homework is in **UWB_CSS342_2019_Fall/class2/homework/**.
     -  (5pt) The matrix size is specified when creating an object of your matrix class, and matrix size is immutable after object creation. 
     -  (5pt) Member variables should be declared as "private" in class.
     -  (5pt) Inside the class, data can be stored either as a one-dimension array or two-dimension array.
-    -  (15pt) Write an Add() member funtion to the matrix class. The signature is (supposed the class we design is called "MyMatrix")
+    -  (15pt) Write an Add() member funtion in the matrix class. The signature is (suppose the class we design is called "MyMatrix")
         ```cpp
         void Add(MyMatrix & theOtherMatrix);
         ```
