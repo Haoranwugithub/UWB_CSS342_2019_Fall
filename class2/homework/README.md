@@ -6,6 +6,7 @@
     - Your work will be graded as following:
         - compiles: code should compile
         - correct: pass all tests, sufficient test cases
+        - no memory leak: run valgrind on your executable and "definitely lost" should be "0 bytes in 0 blocks"
        
 The homework is in **UWB_CSS342_2019_Fall/class2/homework/**. 
 
