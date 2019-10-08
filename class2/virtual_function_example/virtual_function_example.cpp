@@ -18,7 +18,7 @@ class Base
         }
 }; 
 
-class DerivedA:public Base 
+class DerivedA : public Base 
 { 
     int *ptr;
 
@@ -70,22 +70,26 @@ int main()
 
     //NON-VIRTUAL function, binded at compile time 
     Base * pBase = pA;
+	/*
     pBase->show();  
 
     pBase = pB;
     pBase->show();  
+	*/
 
     //VIRTUAL function, binded at runtime 
+	/*
     pBase = pA;
     pBase->print();  
 
     pBase = pB;
     pBase->print();  
+	*/
 
     // which descructor is called? 
     pBase = pA;
     delete pBase;
     
-    pBase = pB;
-    delete pBase;
+   // pBase = pB;
+   // delete pBase;
 }

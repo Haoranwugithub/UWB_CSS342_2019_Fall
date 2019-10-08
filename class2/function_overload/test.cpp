@@ -25,10 +25,9 @@ int operate (int a)
 
 int main ()
 {
-	cout << operate (3, 2) << '\n';
+	cout << operate (3, 2.0) << '\n';
 	cout << operate (1.5, 2.3) << '\n';
 	cout << operate (4.1) << '\n';
-	int a = 4;
-	cout << operate (a) << '\n';
+	cout << operate (4.0) << '\n';
 	return 0;
 }
