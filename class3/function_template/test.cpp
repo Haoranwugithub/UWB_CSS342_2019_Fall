@@ -5,8 +5,15 @@
 
 using namespace std;
 
-template <typename T>
-T Max (T a, T b) { 
+int Max(int a, int b) {
+   return a < b ? b : a; 
+}
+
+float Max(float a, float b) {
+   return a < b ? b : a; 
+}
+
+string Max(string a, string b) {
    return a < b ? b : a; 
 }
 
@@ -15,8 +22,8 @@ int main () {
    int j = 20;
    cout << "Max(i, j): " << Max(i, j) << endl; 
 
-   double f1 = 13.5; 
-   double f2 = 20.7; 
+   float f1 = 13.5; 
+   float f2 = 20.7; 
    cout << "Max(f1, f2): " << Max(f1, f2) << endl; 
 
    //see this for string comparotor http://www.cplusplus.com/reference/string/string/operators/
