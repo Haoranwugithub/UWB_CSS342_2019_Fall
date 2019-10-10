@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-using namespace std;
-
 template<class T>
 class Container {
     // return the number of elements in the array
