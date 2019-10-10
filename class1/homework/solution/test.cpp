@@ -133,7 +133,7 @@ void testReverse() {
 	
 	// reverse an array with even number of elements
 	int evenArraySize = 4;
-	int evenArrayInput[] = {3, 3, 4, 5}, evenArrayOutput[] = {5, 4, 3, 3};
+	int evenArrayInput[] = {5, 3, 4, 3}, evenArrayOutput[] = {3, 4, 3, 5};
 	MyArray<int> evenArray(evenArraySize);
 	for (int i=0; i<evenArraySize; i++) {
 		evenArray.add(evenArrayInput[i]);
