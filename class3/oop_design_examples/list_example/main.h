@@ -1,5 +1,4 @@
-#ifndef LIST_EXAMPLE1_MAIN_H
-#define LIST_EXAMPLE1_MAIN_H
+#pragma once
 
 #include <cassert>
 #include <string>
@@ -13,5 +12,3 @@ void pushBack(int *array, int arraySize, int *listSize, int *frontIdx, int *endI
 void verifyEq(const string &name, int x, int y);
 
 void test(int arraySize);
-
-#endif //LIST_EXAMPLE1_MAIN_H
