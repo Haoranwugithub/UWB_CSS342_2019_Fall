@@ -9,7 +9,6 @@ void logTestPassed(char * testName) {
  * test MyArray::add()
  */
 void testAdd() {
-
 	int testArraySize = 10;
     MyArray<int> arr(testArraySize);
     for (int i = 0; i<testArraySize; i++) {
