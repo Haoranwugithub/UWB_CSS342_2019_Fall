@@ -17,7 +17,8 @@ void testAdd() {
 
     // check the size of the array
     if (arr.count() != testArraySize) {
-        printf("testAdd failed with size: expected(%d), actual(%d)\n", testArraySize, arr.count());
+        printf("testAdd failed with size: expected(%d), actual(%d)\n", 
+				testArraySize, arr.count());
 		return;
     }
 
@@ -39,7 +40,8 @@ void testAdd() {
 		return;
 	}
 	if (arr.count() != testArraySize) {
-        printf("testAdd failed: array size, expected(%d), actual(%d)\n", testArraySize, arr.count());
+        printf("testAdd failed: array size, expected(%d), actual(%d)\n", 
+				testArraySize, arr.count());
 		return;
 	}
 
