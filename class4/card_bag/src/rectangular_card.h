@@ -1,5 +1,4 @@
-#ifndef A_SHAPE_RECTANGULAR_CARD_H
-#define A_SHAPE_RECTANGULAR_CARD_H
+#pragma once
 
 #include "card.h"
 
@@ -16,5 +15,3 @@ public:
 
     bool operator<(rectangular_card const &rect);
 };
-
-#endif //A_SHAPE_RECTANGULAR_CARD_H

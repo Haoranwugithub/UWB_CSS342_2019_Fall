@@ -1,9 +1,7 @@
-#ifndef A_SHAPE_CIRCULAR_CARD_H
-#define A_SHAPE_CIRCULAR_CARD_H
+#pragma once
 
 #include "card.h"
-
-#define PI=3.14159
+#define PI 3.14159
 
 class circular_card : public card {
 private:
@@ -20,5 +18,3 @@ public:
 
     bool operator<(circular_card const &);
 };
-
-#endif //A_SHAPE_CIRCULAR_CARD_H

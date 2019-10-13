@@ -1,12 +1,11 @@
-#ifndef A_SHAPE_BAG_H
-#define A_SHAPE_BAG_H
+#pragma once
 
 template<class T>
 class bag {
 private:
     //static const int SIZE = 100;
     //T shapes[SIZE];
-    T **m_shapes;
+    T** m_shapes;
     int m_count;
     int m_capacity;
 public:
@@ -16,7 +15,7 @@ public:
         delete[] m_shapes;
     }
 
-    explicit bag(int capacity) : m_capacity{capacity} {
+    explicit bag(int capacity) : m_capacity(capacity) {
         m_count = 0;
         m_shapes = new T *[m_capacity];
     };
@@ -42,5 +41,3 @@ public:
 };
 
 #include "bag.cpp"
-
-#endif //A_SHAPE_BAG_H
