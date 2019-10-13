@@ -1,0 +1,24 @@
+#ifndef A_SHAPE_CIRCULAR_CARD_H
+#define A_SHAPE_CIRCULAR_CARD_H
+
+#include "card.h"
+
+#define PI=3.14159
+
+class circular_card : public card {
+private:
+    float m_radius;
+public:
+
+    circular_card() = delete;
+
+    explicit circular_card(float radius) : m_radius{radius} {};
+
+    float area() const override { 
+        return pi * m_radius * m_radius; 
+    }
+
+    bool operator<(circular_card const &);
+};
+
+#endif //A_SHAPE_CIRCULAR_CARD_H
