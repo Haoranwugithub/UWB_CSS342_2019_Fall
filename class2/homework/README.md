@@ -18,7 +18,7 @@ The homework is in **UWB_CSS342_2019_Fall/class2/homework/**.
         ```cpp
         MyArray(const MyArray & array);
         ```
-        This constructor will copy all the content from the object named *array* to the calling object. 
+        This constructor will copy all the content from the object named *array* to the calling object. This will be a ["deep" copy](https://www.cs.utexas.edu/~scottm/cs307/handouts/deepCopying.htm) which means everything pointed by the pointer "T * data" will be copied. Not just the pointer itself. 
     - (5pt) Add unit test(s) to verify the constructor from the last part works correctly. Write as many tests as you think is sufficient. Put your unit tests in your test.cpp file.
     
 
