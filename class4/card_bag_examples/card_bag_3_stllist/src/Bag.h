@@ -6,8 +6,6 @@
 template<class T>
 class Bag : BagInterface<T> {
 private:
-    //static const int SIZE = 100;
-    //T shapes[SIZE];
     std::list<T*> items;
     int capacity;
 public:
