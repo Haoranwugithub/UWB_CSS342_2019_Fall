@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Card.h"
+
 #define PI 3.14159
 
 template<class T>

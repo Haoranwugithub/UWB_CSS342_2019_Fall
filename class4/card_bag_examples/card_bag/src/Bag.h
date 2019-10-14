@@ -7,7 +7,7 @@ class Bag : BagInterface<T> {
 private:
     //static const int SIZE = 100;
     //T shapes[SIZE];
-    T** collection;
+    T **collection;
     int count;
     int capacity;
 public:
@@ -33,7 +33,7 @@ public:
         return count == capacity;
     }
 
-    bool add(T* card) override {
+    bool add(T *card) override {
         bool can_add = !isFull();
         if (can_add) {
             collection[count] = card;
@@ -42,7 +42,7 @@ public:
         return can_add;
     };
 
-    bool remove(T* card) override {
+    bool remove(T *card) override {
         bool is_deleted = false;
         for (int i = 0; i < count; i++) {
             if (collection[i] == card) {
@@ -55,7 +55,7 @@ public:
         return is_deleted;
     };
 
-    bool contains(T* card) override {
+    bool contains(T *card) override {
         for (int i = 0; i < count; i++) {
             if (collection[i] == card) {
                 return true;

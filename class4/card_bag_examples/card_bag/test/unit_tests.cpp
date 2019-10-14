@@ -16,7 +16,8 @@ TEST(area_test, rect_area) {
 TEST(area_test, circle_area) {
     int radius = 4;
     IntCircularCard cir{radius};
-    ASSERT_EQ(cir.area(), int(radius*radius*PI));
+    ASSERT_EQ(cir.area(), int(radius
+            *radius * PI));
 }
 
 TEST(bag_test, add_card) {
@@ -31,7 +32,7 @@ TEST(bag_test, add_card) {
     ASSERT_EQ(cardBag.getCount(), 2);
 }
 
-TEST(bag_test, remove_contains) {
+TEST(bag_test, contains) {
     IntRectangularCard rec(1, 2);
     IntCircularCard cir(5);
 
@@ -44,6 +45,30 @@ TEST(bag_test, remove_contains) {
     ASSERT_TRUE(cardBag.contains(&rec));
     cardBag.add(&cir);
     ASSERT_TRUE(cardBag.contains(&cir));
+}
+
+TEST(bag_test, is_empty) {
+    IntCardBag emptyBag(0);
+    ASSERT_TRUE(emptyBag.isEmpty());
+
+    IntCardBag bag(2);
+    IntCircularCard cc(1);
+    bag.add(&cc);
+    ASSERT_FALSE(bag.isEmpty());
+}
+
+TEST(bag_test, is_full) {
+    IntCardBag emptyBag(0);
+    ASSERT_TRUE(emptyBag.isFull());
+
+    IntCardBag bag(2);
+    IntCircularCard cc(1);
+    bag.add(&cc);
+    ASSERT_FALSE(bag.isFull());
+
+    IntRectangularCard rc(1, 2);
+    bag.add(&rc);
+    ASSERT_TRUE(bag.isFull());
 }
 
 TEST(bag_test, remove_card) {
