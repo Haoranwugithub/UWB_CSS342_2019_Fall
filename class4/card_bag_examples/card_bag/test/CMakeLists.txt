@@ -6,8 +6,7 @@ link_directories(${LIBRARY_OUTPUT_PATH})
 
 target_link_libraries(
                     unit_test
-                    gtest
-                    bag)
+                    gtest)
 
 add_test(
         NAME
