@@ -8,34 +8,39 @@ class Bag : BagInterface<T> {
 private:
     //static const int SIZE = 100;
     //T shapes[SIZE];
-    std::vector<T*> collection;
+    std::vector<T*> items;
     int capacity;
 public:
     Bag() = delete;
 
     ~Bag() {
-        collection.clear();
+        items.clear();
     }
 
     Bag(int capacity) : capacity(capacity) {
     };
 
     int getCount() const override {
-        return collection.size();
+        return items.size();
     }
 
     bool isEmpty() const override {
-        return collection.empty();
+        return items.empty();
     }
 
     bool isFull() const override {
         return getCount() == capacity;
+
+        // or the bag is never full
+        // return false;
     }
 
     bool add(T *item) override {
         bool can_add = !isFull();
         if (can_add) {
-            collection.push_back(item);
+            items.push_back(item);
+            printf("address of the first element: %x, capacity: %ld\n", &(items[0]), items.capacity());
+
         }
         return can_add;
     };
@@ -43,8 +48,8 @@ public:
     bool remove(T *item) override {
         bool is_deleted = false;
         for (int i = 0; i < getCount(); i++) {
-            if (collection.at(i) == item) {
-                collection.erase(collection.begin() + i);
+            if (items[i] == item) {
+                items.erase(items.begin() + i);
                 is_deleted = true;
             }
         }
@@ -53,7 +58,7 @@ public:
 
     bool contains(T *item) override {
         for (int i = 0; i < getCount(); i++) {
-            if (collection.at(i) == item) {
+            if (items.at(i) == item) {
                 return true;
             }
         }
