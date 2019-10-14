@@ -7,18 +7,18 @@ class Bag : BagInterface<T> {
 private:
     //static const int SIZE = 100;
     //T shapes[SIZE];
-    T** cards;
+    T** collection;
     int count;
     int capacity;
 public:
     Bag() = delete;
 
     ~Bag() {
-        delete[] cards;
+        delete[] collection;
     }
 
     explicit Bag(int capacity) : capacity(capacity), count(0) {
-        cards = new T *[capacity];
+        collection = new T *[capacity];
     };
 
     int getCount() const override {
@@ -36,7 +36,7 @@ public:
     bool add(T* card) override {
         bool can_add = !isFull();
         if (can_add) {
-            cards[count] = card;
+            collection[count] = card;
             count++;
         }
         return can_add;
@@ -45,9 +45,8 @@ public:
     bool remove(T* card) override {
         bool is_deleted = false;
         for (int i = 0; i < count; i++) {
-            if (cards[i] == card) {
-                //cards[i] = cards[count--];
-                cards[i] = cards[count - 1];
+            if (collection[i] == card) {
+                collection[i] = collection[count - 1];
                 count--;
                 is_deleted = true;
             }
@@ -58,7 +57,7 @@ public:
 
     bool contains(T* card) override {
         for (int i = 0; i < count; i++) {
-            if (cards[i] == card) {
+            if (collection[i] == card) {
                 return true;
             }
         }
