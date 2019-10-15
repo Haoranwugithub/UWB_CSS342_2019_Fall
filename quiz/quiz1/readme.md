@@ -17,13 +17,15 @@ public:
 };
 ```
 **1. What is the default access visibility (public, private or protected) to variable x and y in the Point class? (5pt)**
-\
+***ANSWER: PRIVATE***
 \
 \
 **2. Implement a copy constructor function for Point class with the following signature (10pt)**
 ```c++
     Point(Point & anotherPoint);
 ```
+***ANSWER:***
+Point(Point & anotherPoint) { x = anotherPoint.x; y = anotherPoint.y; }
 \
 \
 \
@@ -36,8 +38,8 @@ void foo(int arraySize) {
     }
 }
 ```
-\
-\
+***ANSWER:***
+Yes. pointer "points" needs to be deleted or the memory it points to is leaked (never free'd)
 \
 \
 **4. What problem does the following code have in terms of memory access? (20pt)**
@@ -52,7 +54,7 @@ int main() {
     printf("%s", sendMessage());
 }
 ```
-\
+***ANSWER: Dangling pointer. msg[20] is "free'd" (returned to system) after sendMessage() finishes. The returned pointer msg will be pointing to memory address that does not belong to this program at the printf statement***
 \
 \
 **5. Given the following code:**
@@ -82,17 +84,20 @@ int main() {
 }
 ```
 **- What's the output when it runs? (15pt)**
-\
-\
+
+***ANSWER:***
+```bash
+it is sunny
+~Base()
+```
 \
 \
 **- Does this code have memory leak? and if yes, why? (15pt)**
-\
-\
+
+***ANSWER: Yes because memory pointed to by ptr is allocated in constructor but the delete in ~Derived() is never called***
 \
 \
 **- And if it has memory leak, how to fix it? (15pt)**
-  
-  
-  
+
+***ANSWER: Mark ~Base() virtual***
   
