@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(a_shape)
+project(cmake_example)
 
 set(CMAKE_CXX_STANDARD 17)
 Set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/lib)

@@ -21,6 +21,7 @@ int main() {
 		printf("vect1[%d] = %d\n", i, vect1[i]);
 	}
 
+	// sort the vector 
 	std::sort(vect1.begin(), vect1.begin()+8);
 
 	printf("\nvect1 after sort\n");
@@ -28,6 +29,7 @@ int main() {
 		printf("vect1[%d] = %d\n", i, vect1[i]);
 	}
   
+	// show vect2 is a full copy of vect1
 	printf("\nvect2 after sort\n");
 	for (int i=0; i<vect2.size(); i++) {
 		printf("vect2[%d] = %d\n", i, vect2[i]);
