@@ -75,7 +75,7 @@ TEST(sll_test, constructor) {
 ```C++
 template <class T>
 void SingleLinkedList<T>::reverse_iterative() {
-    // NOT IMPLEMENTED
+    // homework 
 }
 ```
 
