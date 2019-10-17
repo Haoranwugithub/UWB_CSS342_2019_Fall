@@ -10,8 +10,8 @@ Use folder ```problem_1```.
  */
 template <class T>
 bool SingleLinkedList<T>::remove(T val) {
-    // NOT IMPLEMENTED
-    return false;
+    // homework
+    return false; // place holder. change this in your homework
 }
 ```
 The skeleton code is already provided and should not be modified. 
