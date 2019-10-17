@@ -91,25 +91,13 @@ TEST(sll_test, poptail) {
 }
 
 TEST(sll_test, remove) {
+    // homework
 
-    // remove from an empty list
-    SingleLinkedList<int> list;
-    ASSERT_FALSE(list.remove(0));
+}
 
-    // remove from a single element list
-    list.append(1);
-    ASSERT_FALSE(list.remove(2));
-    ASSERT_TRUE(list.remove(1));
-    ASSERT_EQ(list.size(), 0);
+TEST(sll_test, constructor) {
+    // homework
 
-    // remove from list with multiple elements with duplicates
-    std::vector input = std::vector<int>{4, 3, 4, 4, 5, 4, 4};
-    std::vector<int> answer = std::vector<int>{3, 5};
-    for (int i=0; i<input.size(); i++) {
-        list.append(input[i]);
-    }
-    list.remove(4);
-    ASSERT_TRUE(answer == list.toVector());
 }
 
 TEST(sll_test, test_equal) {
@@ -154,6 +142,7 @@ TEST(sll_test, reverse_iterative) {
     ASSERT_TRUE(test_reverse_iterative_n(1));
     ASSERT_TRUE(test_reverse_iterative_n(2));
     ASSERT_TRUE(test_reverse_iterative_n(3));
+    ASSERT_TRUE(test_reverse_iterative_n(4));
 }
 
 TEST(sll_test, iterator_begin_end_demo) {

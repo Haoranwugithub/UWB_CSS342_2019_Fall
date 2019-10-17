@@ -31,6 +31,9 @@ T SingleLinkedList<T>::size() const {
     return count;
 }
 
+/*
+ * delete everything from the linked list
+ */
 template <class T>
 void SingleLinkedList<T>::clear() {
     ListNode<T>* ptr = head->next;
@@ -53,7 +56,7 @@ std::vector<T> SingleLinkedList<T>::toVector() const {
 
 template <class T>
 void SingleLinkedList<T>::reverse_iterative() {
-    // NOT IMPLEMENTED
+    // homework
 }
 
 template <class T>
@@ -72,7 +75,7 @@ bool SingleLinkedList<T>::equal(SingleLinkedList &otherList) {
 
 template <class T>
 SingleLinkedList<T>::SingleLinkedList(SingleLinkedList &list) {
-    // NOT IMPLEMENTED
+    // homework
 }
 
 template <class T>
@@ -109,8 +112,8 @@ SingleLinkedList<T>::Iterator::Iterator(ListNode<T> *currNode) : m_currNode(curr
  */
 template <class T>
 bool SingleLinkedList<T>::remove(T val) {
-    // NOT IMPLEMENTED
-    return false;
+    // homework
+    return false; // place holder. change this in your homework
 }
 
 template <class T>
