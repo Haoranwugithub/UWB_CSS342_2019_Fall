@@ -2,7 +2,7 @@
 
 Use folder ```problem_1```.
 
-1. (10pt) Implement remove(T val) in src/SingleLinkedList.cpp
+1. (10pt) Implement remove(T val) in ***src/SingleLinkedList.cpp***
 ```C++
 /*
  * Removes all the nodes whose val equals the val in the parameter
@@ -27,7 +27,7 @@ For example:
 * If the list has 1->1, after calling the remove(1) the list will be empty, and return true
 
 
-2. (10pt) Write a unit test for your remove(T val) in task 1 to verify it works correctly. The following cases have to be verified in your tests:
+2. (10pt) Write a unit test in ***test/unit_tests.cpp*** for your remove(T val) in task 1 to verify it works correctly. The following cases have to be verified in your tests:
 * input is empty
 * input has one element
 * input has more than one elements without duplicates
@@ -35,3 +35,5 @@ For example:
 * input has more than one elements, all elements being the same values
 
 Your tests should verify both the correct elements are removed AND remove(T val) returns the correct boolean value.
+
+hint: ***TEST(sll_test, append)*** provided an exmaple how you can generate testing input, initialize a list object, call the function and compare result.
