@@ -33,3 +33,13 @@ For example, if the bag contains the following cards:
 
 Then maxArea() should return a pointer to c2 because it has the largest area 50.265442 comparing to 28.274309 and 2.0.
 
+### 2. (10pt) Write a unit test in test/unit_tests.cpp to verify your maxArea()
+
+At least the following cases need to be covered
+
+* Bag is empty (maxArea() should return nullpt)
+* Bag contains only CircularCard objects with different area values
+* Bag contains only RectangularCard objects with different area values
+* Bag contains both RectangularCard and CircularCard objects with different area values
+* Bag contains both RectangularCard and CircularCard objects with same area values
+
