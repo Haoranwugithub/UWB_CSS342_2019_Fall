@@ -96,5 +96,6 @@ TEST(sll_test, merge) {
 }
 ```
 
-
+### Bonus Point (10pt)
+Can you solve task 3 without calling insert(T val)?
 
