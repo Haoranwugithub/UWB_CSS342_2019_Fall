@@ -42,13 +42,13 @@ The insert(T) function adds value to the list while ***maintaining the ascending
 
 For example:
 
-*If the input list is empty, insert(1) will add one node to the list with value set to 1
-*If the input list is 1, insert(2) will make the list 1->2
-*If the input list is 3, insert(2) will make the list 2->3
-*If the input list is 1->3->5, insert(2) will make the list 1->2->3->5
-*If the input list is 2->3->5, insert(1) will make the list 1->2->3->5
-*If the input list is 2->3->5, insert(8) will make the list 2->3->5->8
-*If the input list is 1->2->2->4, insert(3) will make the list 1->2->2->3->4
+* If the input list is empty, insert(1) will add one node to the list with value set to 1
+* If the input list is 1, insert(2) will make the list 1->2
+* If the input list is 3, insert(2) will make the list 2->3
+* If the input list is 1->3->5, insert(2) will make the list 1->2->3->5
+* If the input list is 2->3->5, insert(1) will make the list 1->2->3->5
+* If the input list is 2->3->5, insert(8) will make the list 2->3->5->8
+* If the input list is 1->2->2->4, insert(3) will make the list 1->2->2->3->4
 
 
 ### 2. (5pt) Write a unit test in ***test/unit_tests.cpp*** for your insert(T) in task 1 to verify it works correctly. The following cases have to be verified in your tests:
