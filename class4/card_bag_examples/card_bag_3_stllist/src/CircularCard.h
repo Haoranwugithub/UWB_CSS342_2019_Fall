@@ -7,7 +7,7 @@
 template<class T>
 class CircularCard : public Card<T> {
 private:
-    float m_radius;
+    T m_radius;
 public:
 
     CircularCard() = delete;
