@@ -8,6 +8,11 @@
 #define IntCircularCard CircularCard<int>
 #define IntCardBag Bag<Card<int>>
 
+TEST(bag_test, max_area) {
+    // homework
+}
+
+
 TEST(area_test, rect_area) {
     IntRectangularCard rect(5, 3);
     ASSERT_EQ(rect.area(), 15);

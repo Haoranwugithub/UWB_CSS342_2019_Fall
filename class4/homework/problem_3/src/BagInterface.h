@@ -14,4 +14,7 @@ public:
     virtual bool remove(T *) = 0;
 
     virtual bool contains(T *) = 0;
+
+	// homework
+	virtual T* maxArea() = 0;
 };

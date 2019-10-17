@@ -61,4 +61,8 @@ public:
         }
         return false;
     };
+
+    T* maxArea() override {
+        // homework
+    }
 };
