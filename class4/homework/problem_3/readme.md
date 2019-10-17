@@ -11,7 +11,6 @@ The bag can only contain cards of type either CircularCard or RectangularCard.
 In fact the maxArea has been added to ***src/BagInterface.h***
 
 ```C++
-// homework
     virtual Card<T>* maxArea() = 0;
 ```
 
