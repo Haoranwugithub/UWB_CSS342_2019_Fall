@@ -187,4 +187,17 @@ TEST(sll_test, reverse_recursive) {
     ASSERT_TRUE(test_reverse_recursive_n(3));
 }
 
+TEST(sll_test, iterator_begin_end_demo) {
 
+    SingleLinkedList<int> list;
+    std::vector input = std::vector<int>{4, 3, 4, 4, 5, 4, 4};
+    for (int i = 0; i < input.size(); i++) {
+        list.append(input[i]);
+    }
+
+    int i=0;
+    for (SingleLinkedList<int>::Iterator it = list.begin(); it != list.end(); it++ ) {
+        ASSERT_EQ(*it, input[i]);
+        i++;
+    }
+}
