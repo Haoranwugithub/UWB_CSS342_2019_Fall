@@ -42,8 +42,6 @@ public:
 
     void reverse_iterative();
 
-    void reverse_recursive();
-
     class Iterator {
     private:
         ListNode<T> *m_currNode;

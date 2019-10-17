@@ -53,17 +53,7 @@ std::vector<T> SingleLinkedList<T>::toVector() const {
 
 template <class T>
 void SingleLinkedList<T>::reverse_iterative() {
-    auto p0 = head->next;
-    if (p0 == nullptr || p0->next == nullptr) {
-        return;
-    }
-    auto p1 = p0->next;
-    while (p1 != nullptr) {
-        p0->next = p1->next;
-        p1->next = head->next;
-        head->next = p1;
-        p1 = p0->next;
-    }
+    // NOT IMPLEMENTED
 }
 
 template <class T>
@@ -80,39 +70,9 @@ bool SingleLinkedList<T>::equal(SingleLinkedList &otherList) {
     return it == end() && otherIt == otherList.end();
 }
 
-// homework
 template <class T>
 SingleLinkedList<T>::SingleLinkedList(SingleLinkedList &list) {
-    head = new ListNode<T>();
-    auto p0 = head;
-    for (auto it = list.begin(); it != list.end(); it++) {
-        p0->next = new ListNode<T>(*it);
-        p0 = p0->next;
-    }
-}
-
-template <class T>
-ListNode<T> *SingleLinkedList<T>::_reverse_recursive(ListNode<T> *head) {
-    auto p0 = head->next;
-    if (p0->next == nullptr) {
-        return p0;
-    }
-
-    auto p1 = _reverse_recursive(p0);
-
-    head->next = p0->next;
-    p0->next = p1->next;
-    p1->next = p0;
-
-    return p0;
-}
-
-template <class T>
-void SingleLinkedList<T>::reverse_recursive() {
-    if (head->next == nullptr) {
-        return;
-    }
-    _reverse_recursive(head);
+    // NOT IMPLEMENTED
 }
 
 template <class T>
@@ -149,20 +109,8 @@ SingleLinkedList<T>::Iterator::Iterator(ListNode<T> *currNode) : m_currNode(curr
  */
 template <class T>
 bool SingleLinkedList<T>::remove(T val) {
-    ListNode<T>* ptr = head;
-    bool removed = false;
-
-    while (ptr->next != nullptr) {
-        if (ptr->next->val == val) {
-            ListNode<T> *newNext = ptr->next->next;
-            delete ptr->next;
-            ptr->next = newNext;
-            removed = true;
-            continue;
-        }
-        ptr = ptr->next;
-    }
-    return removed;
+    // NOT IMPLEMENTED
+    return false;
 }
 
 template <class T>
@@ -180,14 +128,5 @@ typename SingleLinkedList<T>::Iterator SingleLinkedList<T>::erase(SingleLinkedLi
     }
     return SingleLinkedList<T>::Iterator(nullptr);
 }
-
-/*
- * home work
- */
-template <class T>
-typename SingleLinkedList<T>::Iterator SingleLinkedList<T>::erase(SingleLinkedList<T>::Iterator start, SingleLinkedList<T>::Iterator end) {
-    return SingleLinkedList<T>::Iterator(nullptr);
-}
-
 
 

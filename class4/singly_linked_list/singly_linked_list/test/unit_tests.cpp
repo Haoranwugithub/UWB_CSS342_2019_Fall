@@ -16,15 +16,7 @@ TEST(sll_test, to_vector) {
 }
 
 TEST(sll_test, clear) {
-    SingleLinkedList<int> list;
-    list.clear();
-
-    int testSize = 5;
-    for (int i = 0; i < testSize; i++) {
-        list.append(i);
-    }
-    list.clear();
-    ASSERT_EQ(list.size(), 0);
+    // NOT IMPLEMENTED
 }
 
 TEST(sll_test, append) {
@@ -141,22 +133,6 @@ TEST(sll_test, test_equal) {
     ASSERT_TRUE(list1.equal(list2));
 }
 
-bool test_reverse_recursive_n(int n) {
-    SingleLinkedList<int> list;
-    for (int i = 0; i < n; i++) {
-        list.append(i);
-    }
-
-    SingleLinkedList<int> revList;
-    for (int i = n - 1; i >= 0; i--) {
-        revList.append(i);
-    }
-
-    list.reverse_recursive();
-
-    return list.equal(revList);
-}
-
 bool test_reverse_iterative_n(int n) {
     SingleLinkedList<int> list;
     for (int i = 0; i < n; i++) {
@@ -178,13 +154,6 @@ TEST(sll_test, reverse_iterative) {
     ASSERT_TRUE(test_reverse_iterative_n(1));
     ASSERT_TRUE(test_reverse_iterative_n(2));
     ASSERT_TRUE(test_reverse_iterative_n(3));
-}
-
-TEST(sll_test, reverse_recursive) {
-    ASSERT_TRUE(test_reverse_recursive_n(0));
-    ASSERT_TRUE(test_reverse_recursive_n(1));
-    ASSERT_TRUE(test_reverse_recursive_n(2));
-    ASSERT_TRUE(test_reverse_recursive_n(3));
 }
 
 TEST(sll_test, iterator_begin_end_demo) {
