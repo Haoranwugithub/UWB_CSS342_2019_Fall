@@ -1,4 +1,4 @@
-## Complete the Singly Linked List
+## Complete the Singly Linked List (50pt)
 
 Use folder ```problem_1```.
 
