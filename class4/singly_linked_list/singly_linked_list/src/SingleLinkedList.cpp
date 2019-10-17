@@ -129,7 +129,8 @@ template <class T>
 void SingleLinkedList<T>::popTail() {
     auto p0 = head, p1 = head->next;
 
-    while (p0->next != nullptr && p1->next != nullptr) {
+    // move both p0 and p1 forward until p1 is the last element or nullptr
+    while (p1 != nullptr && p1->next != nullptr) {
         p1 = p1->next;
         p0 = p0->next;
     }
