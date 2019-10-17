@@ -11,13 +11,13 @@ The bag can only contain cards of type either CircularCard or RectangularCard.
 In fact the maxArea has been added to ***src/BagInterface.h***
 
 ```C++
-	// homework
-	virtual T* maxArea() = 0;
+// homework
+    virtual Card<T>* maxArea() = 0;
 ```
 
 The task is to complete the implementation of maxArea in ***src/Bag.h***. Skeleton code is already provided:
 ```C++
-    T* maxArea() override {
+    Card<T>* maxArea() override {
         // homework
     }
 ```
