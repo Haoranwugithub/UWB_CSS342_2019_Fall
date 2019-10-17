@@ -1,32 +1,18 @@
-#ifndef A_SHAPE_LISTNODE_H
-#define A_SHAPE_LISTNODE_H
+#pragma once
 
+template <class T> class SingleLinkedList;
+
+template <class T>
 class ListNode {
+    friend class SingleLinkedList<T>;
+private:
+    T val;
+    ListNode * next;
+
 public:
     // val(0) to make valgrind happy
-    ListNode() : val(0), next(nullptr) {}
-
-    ListNode(int val) : val(val), next(nullptr) {}
-
-    int getVal() const {
-        return val;
+    ListNode() : next(nullptr) {
     }
 
-    void setVal(int val) {
-        ListNode::val = val;
-    }
-
-    ListNode *getNext() const {
-        return next;
-    }
-
-    void setNext(ListNode *next) {
-        ListNode::next = next;
-    }
-
-private:
-    int val;
-    ListNode * next;
+    ListNode(T val) : val(val), next(nullptr) {}
 };
-
-#endif //A_SHAPE_LISTNODE_H

@@ -1,37 +1,155 @@
 #include "SingleLinkedList.h"
 #include "gtest/gtest.h"
 
-TEST(sll_test, add_node) {
-    SingleLinkedList list;
-    list.add(99);
-    ASSERT_EQ(list.count(), 1);
+TEST(sll_test, to_vector) {
+    SingleLinkedList<int> list;
+    int testSize = 5;
+    std::vector<int> answer;
+    for (int i = 0; i < testSize; i++) {
+        answer.push_back(i);
+        list.append(i);
+    }
 
-    list.add(100);
-    ASSERT_EQ(list.count(), 2);
+    ASSERT_EQ(list.size(), testSize);
 
+    ASSERT_TRUE(answer == list.toVector());
 }
 
-TEST(sll_test, to_vector) {
-    SingleLinkedList list;
-    for (int i = 0; i < 5; i++) {
-        list.add(i);
+TEST(sll_test, clear) {
+    SingleLinkedList<int> list;
+    list.clear();
+
+    int testSize = 5;
+    for (int i = 0; i < testSize; i++) {
+        list.append(i);
+    }
+    list.clear();
+    ASSERT_EQ(list.size(), 0);
+}
+
+TEST(sll_test, append) {
+    SingleLinkedList<int> list;
+
+    int testSize = 5;
+    std::vector<int> answer;
+    for (int i=0; i<testSize; i++) {
+        list.append(i);
+        answer.push_back(i);
+    }
+    ASSERT_TRUE(answer == list.toVector());
+}
+
+TEST(sll_test, prepend) {
+    SingleLinkedList<int> list;
+
+    int testSize = 5;
+    std::vector<int> answer;
+    for (int i=0; i<testSize; i++) {
+        list.prepend(i);
+        answer.insert(answer.begin(), i);
+    }
+    ASSERT_TRUE(answer == list.toVector());
+}
+
+
+TEST(sll_test, pophead) {
+    SingleLinkedList<int> list;
+    ASSERT_NO_FATAL_FAILURE(list.popHead());
+    ASSERT_EQ(list.size(), 0);
+
+    list.prepend(1);
+    list.popHead();
+    ASSERT_EQ(list.size(), 0);
+
+    int testSize = 5;
+    std::vector<int> answer;
+    for (int i = 0; i < testSize; i++) {
+        list.append(i);
+        if (i!=0) {
+            answer.push_back(i);
+        }
     }
 
-    auto vec = list.toVector();
-    for (int i = 0; i < 5; i++) {
-        ASSERT_EQ(vec[i], i);
+    list.popHead();
+    ASSERT_EQ(list.size(), testSize-1);
+    ASSERT_TRUE(answer == list.toVector());
+}
+
+TEST(sll_test, poptail) {
+    SingleLinkedList<int> list;
+    ASSERT_NO_FATAL_FAILURE(list.popTail());
+    ASSERT_EQ(list.size(), 0);
+
+    list.prepend(1);
+    list.popTail();
+    ASSERT_EQ(list.size(), 0);
+
+    int testSize = 5;
+    std::vector<int> answer;
+    for (int i = 0; i < testSize; i++) {
+        list.append(i);
+        if (i!=testSize-1) {
+            answer.push_back(i);
+        }
     }
+
+    list.popTail();
+    ASSERT_EQ(list.size(), testSize-1);
+    ASSERT_TRUE(answer== list.toVector());
+}
+
+TEST(sll_test, remove) {
+
+    // remove from an empty list
+    SingleLinkedList<int> list;
+    ASSERT_FALSE(list.remove(0));
+
+    // remove from a single element list
+    list.append(1);
+    ASSERT_FALSE(list.remove(2));
+    ASSERT_TRUE(list.remove(1));
+    ASSERT_EQ(list.size(), 0);
+
+    // remove from list with multiple elements with duplicates
+    std::vector input = std::vector<int>{4, 3, 4, 4, 5, 4, 4};
+    std::vector<int> answer = std::vector<int>{3, 5};
+    for (int i=0; i<input.size(); i++) {
+        list.append(input[i]);
+    }
+    list.remove(4);
+    ASSERT_TRUE(answer == list.toVector());
+}
+
+TEST(sll_test, test_equal) {
+    int testSize = 5;
+    SingleLinkedList<int> list1;
+    SingleLinkedList<int> list2;
+
+    ASSERT_TRUE(list1.equal(list2));
+
+    list1.append(1);
+    ASSERT_FALSE(list1.equal(list2));
+
+    std::vector input = std::vector<int>{1, 2, 3};
+    for (int i=0; i<input.size(); i++) {
+        list2.append(input[i]);
+    }
+    ASSERT_FALSE(list1.equal(list2));
+
+    list1.append(2);
+    list1.append(3);
+    ASSERT_TRUE(list1.equal(list2));
 }
 
 bool test_reverse_recursive_n(int n) {
-    SingleLinkedList list;
+    SingleLinkedList<int> list;
     for (int i = 0; i < n; i++) {
-        list.add(i);
+        list.append(i);
     }
 
-    SingleLinkedList revList;
+    SingleLinkedList<int> revList;
     for (int i = n - 1; i >= 0; i--) {
-        revList.add(i);
+        revList.append(i);
     }
 
     list.reverse_recursive();
@@ -40,14 +158,14 @@ bool test_reverse_recursive_n(int n) {
 }
 
 bool test_reverse_iterative_n(int n) {
-    SingleLinkedList list;
+    SingleLinkedList<int> list;
     for (int i = 0; i < n; i++) {
-        list.add(i);
+        list.append(i);
     }
 
-    SingleLinkedList revList;
+    SingleLinkedList<int> revList;
     for (int i = n - 1; i >= 0; i--) {
-        revList.add(i);
+        revList.append(i);
     }
 
     list.reverse_iterative();
@@ -70,210 +188,3 @@ TEST(sll_test, reverse_recursive) {
 }
 
 
-TEST(sll_test, test_equal) {
-    SingleLinkedList list1;
-    SingleLinkedList list2;
-    ASSERT_TRUE(list1.equal(list2));
-
-    list1.add(1);
-    ASSERT_FALSE(list1.equal(list2));
-
-    list2.add(1);
-    ASSERT_TRUE(list1.equal(list2));
-
-    list1.add(2);
-    ASSERT_FALSE(list1.equal(list2));
-
-    list2.add(2);
-    ASSERT_TRUE(list1.equal(list2));
-
-    list2.add(3);
-    ASSERT_FALSE(list1.equal(list2));
-
-    list1.add(3);
-    ASSERT_TRUE(list1.equal(list2));
-    ASSERT_TRUE(list2.equal(list1));
-
-    list1.add(4);
-    list1.add(5);
-    ASSERT_FALSE(list1.equal(list2));
-    ASSERT_FALSE(list2.equal(list1));
-}
-
-TEST(sll_test, test_tail) {
-    SingleLinkedList list;
-    auto it = list.tail();
-    ASSERT_TRUE(it == list.end());
-
-    list.add(1);
-    it = list.tail();
-    ASSERT_EQ(*it, 1);
-
-    list.add(2);
-    it = list.tail();
-    ASSERT_EQ(*it, 2);
-}
-
-TEST(sll_test, test_pophead) {
-    SingleLinkedList list;
-    list.popHead();
-    ASSERT_EQ(list.count(), 0);
-
-    list.pushHead(1);
-    list.popHead();
-    ASSERT_EQ(list.count(), 0);
-
-    for (int i = 0; i < 3; i++) {
-        list.add(i);
-    }
-    list.popHead();
-    ASSERT_EQ(list.count(), 2);
-    int testVal = 1;
-    for (auto it = list.begin(); it != list.end(); it++) {
-        ASSERT_EQ(*it, testVal++);
-    }
-}
-
-TEST(sll_test, test_pushhead) {
-    SingleLinkedList list;
-
-    list.pushHead(1);
-    ASSERT_EQ(list.count(), 1);
-    auto it = list.begin();
-    ASSERT_EQ(*it, 1);
-
-    list.pushHead(2);
-    ASSERT_EQ(list.count(), 2);
-
-    int testVal = 2;
-    for (auto it = list.begin(); it != list.end(); it++) {
-        ASSERT_EQ(*it, testVal--);
-    }
-}
-
-TEST(sll_test, test_popend) {
-    SingleLinkedList *list = new SingleLinkedList();
-    list->popTail();
-    ASSERT_EQ(list->count(), 0);
-    delete list;
-
-    list = new SingleLinkedList();
-    list->add(1);
-    list->popTail();
-    ASSERT_EQ(list->count(), 0);
-    delete list;
-
-    list = new SingleLinkedList();
-    list->add(1);
-    list->add(2);
-    list->popTail();
-    ASSERT_EQ(list->count(), 1);
-    ASSERT_EQ(*(list->begin()), 1);
-    ASSERT_EQ(*(list->tail()), 1);
-    delete list;
-
-    list = new SingleLinkedList();
-    list->add(1);
-    list->add(2);
-    list->add(3);
-    list->popTail();
-    ASSERT_EQ(list->count(), 2);
-    ASSERT_EQ(*(list->begin()), 1);
-    ASSERT_EQ(*(list->tail()), 2);
-    delete list;
-}
-
-TEST(sll_test, test_remove) {
-    SingleLinkedList list;
-    ASSERT_NO_FATAL_FAILURE(list.remove(0));
-
-    list.add(1);
-    ASSERT_NO_FATAL_FAILURE(list.remove(2));
-
-    list.remove(1);
-    ASSERT_EQ(list.count(), 0);
-
-    list.add(2);
-    list.add(3);
-    list.add(4);
-    list.remove(2);
-    ASSERT_EQ(list.count(), 2);
-    ASSERT_EQ(*(list.begin()), 3);
-    ASSERT_EQ(*(list.tail()), 4);
-
-    list.remove(4);
-    ASSERT_EQ(list.count(), 1);
-    ASSERT_EQ(*(list.begin()), 3);
-    ASSERT_EQ(*(list.tail()), 3);
-
-    list.remove(3);
-    ASSERT_EQ(list.count(), 0);
-
-    list.add(2);
-    list.add(2);
-    list.add(3);
-    list.add(4);
-    list.add(4);
-    list.add(5);
-    list.add(4);
-    list.add(4);
-    list.remove(2);
-    auto r = vector<int>{3, 4, 4, 5, 4, 4};
-    ASSERT_EQ(list.toVector(), r);
-
-    list.remove(4);
-    r = vector<int>{3, 5};
-    ASSERT_EQ(list.toVector(), r);
-}
-
-
-// what's going to happen here?
-// this will cause error with valgrind due to it++ using freed memory
-TEST(sll_test, test_remove_in_loop_using_itr) {
-    SingleLinkedList list;
-    for (int i = 0; i < 5; i++) {
-        list.add(i);
-    }
-
-    for (auto it = list.begin(); it != list.end(); it++) {
-        if (*it % 2 == 0) {
-            list.remove(*it);
-        }
-    }
-
-    list.add(1);
-}
-
-TEST(sll_test, test_erase) {
-    SingleLinkedList list;
-
-    auto it = list.erase(list.end());
-    ASSERT_TRUE(it == list.end());
-
-    it = list.erase(list.begin());
-    ASSERT_TRUE(it == list.end());
-
-    list.add(1);
-    it = list.begin();
-    list.erase(it);
-    ASSERT_EQ(list.count(), 0);
-
-    list.add(9);
-    list.add(1);
-    list.add(9);
-    list.add(9);
-    list.add(2);
-    list.add(9);
-    list.add(3);
-    list.add(9);
-    for (auto it = list.begin(); it != list.end();) {
-        if (*it == 9) {
-            it = list.erase(it);
-        } else {
-            it++;
-        }
-
-    }
-    auto r = vector<int>{1, 2, 3};
-    ASSERT_EQ(list.toVector(), r);
-}

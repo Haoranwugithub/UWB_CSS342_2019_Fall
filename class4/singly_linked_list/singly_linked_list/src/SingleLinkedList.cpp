@@ -1,49 +1,73 @@
 #include "SingleLinkedList.h"
 
-void SingleLinkedList::add(int val) {
-    ListNode *ptr = m_head;
+template <class T>
+void SingleLinkedList<T>::append(T val){
+    ListNode<T> *ptr = head;
 
-    while (ptr->getNext() != nullptr) {
-        ptr = ptr->getNext();
+    while (ptr->next != nullptr) {
+        ptr = ptr->next;
     }
 
-    ptr->setNext(new ListNode(val));
+    ptr->next = new ListNode<T>(val);
 }
 
-int SingleLinkedList::count() const {
-    int count = 0;
-    ListNode *ptr = m_head;
-    while (ptr->getNext() != nullptr) {
-        ptr = ptr->getNext();
+template <class T>
+void SingleLinkedList<T>::prepend(T val) {
+    ListNode<T> *newNode = new ListNode<T>(val);
+    newNode->next = head->next;
+    head->next = newNode;
+}
+
+
+template <class T>
+T SingleLinkedList<T>::size() const {
+    T count = 0;
+    ListNode<T> *ptr = head;
+    while (ptr->next != nullptr) {
+        ptr = ptr->next;
         count++;
     }
 
     return count;
 }
 
-vector<int> SingleLinkedList::toVector() const {
-    vector<int> vec;
-    for (auto ptr = m_head->getNext(); ptr != nullptr; ptr = ptr->getNext()) {
-        vec.push_back(ptr->getVal());
+template <class T>
+void SingleLinkedList<T>::clear() {
+    ListNode<T>* ptr = head->next;
+    while (ptr != nullptr) {
+        ListNode<T>* curr = ptr;
+        ptr = ptr->next;
+        delete curr;
     }
-    return vec;
+    head->next = nullptr;
 }
 
-void SingleLinkedList::reverse_iterative() {
-    auto p0 = m_head->getNext();
-    if (p0 == nullptr || p0->getNext() == nullptr) {
+template <class T>
+std::vector<T> SingleLinkedList<T>::toVector() const {
+    std::vector<T> output;
+    for (ListNode<T> *ptr = head->next; ptr != nullptr; ptr = ptr->next) {
+        output.push_back(ptr->val);
+    }
+    return output;
+}
+
+template <class T>
+void SingleLinkedList<T>::reverse_iterative() {
+    auto p0 = head->next;
+    if (p0 == nullptr || p0->next == nullptr) {
         return;
     }
-    auto p1 = p0->getNext();
+    auto p1 = p0->next;
     while (p1 != nullptr) {
-        p0->setNext(p1->getNext());
-        p1->setNext(m_head->getNext());
-        m_head->setNext(p1);
-        p1 = p0->getNext();
+        p0->next = p1->next;
+        p1->next = head->next;
+        head->next = p1;
+        p1 = p0->next;
     }
 }
 
-bool SingleLinkedList::equal(SingleLinkedList &otherList) {
+template <class T>
+bool SingleLinkedList<T>::equal(SingleLinkedList &otherList) {
     auto it = begin(), otherIt = otherList.begin();
     while (it != end() && otherIt != otherList.end()) {
         if (*it != *otherIt) {
@@ -56,104 +80,113 @@ bool SingleLinkedList::equal(SingleLinkedList &otherList) {
     return it == end() && otherIt == otherList.end();
 }
 
-SingleLinkedList::SingleLinkedList(SingleLinkedList &list) {
-    m_head = new ListNode();
-    auto p0 = m_head;
+// homework
+template <class T>
+SingleLinkedList<T>::SingleLinkedList(SingleLinkedList &list) {
+    head = new ListNode<T>();
+    auto p0 = head;
     for (auto it = list.begin(); it != list.end(); it++) {
-        p0->setNext(new ListNode(*it));
-        p0 = p0->getNext();
+        p0->next = new ListNode<T>(*it);
+        p0 = p0->next;
     }
 }
 
-ListNode *SingleLinkedList::_reverse_recursive(ListNode *head) {
-    auto p0 = head->getNext();
-    if (p0->getNext() == nullptr) {
+template <class T>
+ListNode<T> *SingleLinkedList<T>::_reverse_recursive(ListNode<T> *head) {
+    auto p0 = head->next;
+    if (p0->next == nullptr) {
         return p0;
     }
 
     auto p1 = _reverse_recursive(p0);
 
-    head->setNext(p0->getNext());
-    p0->setNext(p1->getNext());
-    p1->setNext(p0);
+    head->next = p0->next;
+    p0->next = p1->next;
+    p1->next = p0;
 
     return p0;
 }
 
-void SingleLinkedList::reverse_recursive() {
-    if (m_head->getNext() == nullptr) {
+template <class T>
+void SingleLinkedList<T>::reverse_recursive() {
+    if (head->next == nullptr) {
         return;
     }
-    _reverse_recursive(m_head);
+    _reverse_recursive(head);
 }
 
-void SingleLinkedList::pushHead(int val) {
-    ListNode *newNode = new ListNode(val);
-    newNode->setNext(m_head->getNext());
-    m_head->setNext(newNode);
-}
-
-void SingleLinkedList::popHead() {
-    auto ptr = m_head->getNext();
+template <class T>
+void SingleLinkedList<T>::popHead() {
+    ListNode<T>* ptr = head->next;
     if (ptr != nullptr) {
-        m_head->setNext(ptr->getNext());
+        head->next = ptr->next;
         delete ptr;
     }
     return;
 }
 
-void SingleLinkedList::popTail() {
-    auto p0 = m_head, p1 = m_head->getNext();
+template <class T>
+void SingleLinkedList<T>::popTail() {
+    auto p0 = head, p1 = head->next;
 
-    while (p0->getNext() != nullptr && p1->getNext() != nullptr) {
-        p1 = p1->getNext();
-        p0 = p0->getNext();
+    while (p0->next != nullptr && p1->next != nullptr) {
+        p1 = p1->next;
+        p0 = p0->next;
     }
 
     if (p1 != nullptr) {
-        p0->setNext(nullptr);
+        p0->next = nullptr;
         delete p1;
     }
 }
 
-SingleLinkedList::Iterator::Iterator(ListNode *currNode) : m_currNode(currNode) {}
+template <class T>
+SingleLinkedList<T>::Iterator::Iterator(ListNode<T> *currNode) : m_currNode(currNode) {}
 
 /*
  * Removes from the container all the elements that compare equal to val
  */
-void SingleLinkedList::remove(int val) {
-    auto ptr = m_head;
-    while (ptr->getNext() != nullptr) {
-        if (ptr->getNext()->getVal() == val) {
-            auto newNext = ptr->getNext()->getNext();
-            delete ptr->getNext();
-            ptr->setNext(newNext);
-        } else {
-            ptr = ptr->getNext();
+template <class T>
+bool SingleLinkedList<T>::remove(T val) {
+    ListNode<T>* ptr = head;
+    bool removed = false;
+
+    while (ptr->next != nullptr) {
+        if (ptr->next->val == val) {
+            ListNode<T> *newNext = ptr->next->next;
+            delete ptr->next;
+            ptr->next = newNext;
+            removed = true;
+            continue;
         }
+        ptr = ptr->next;
     }
+    return removed;
 }
 
-SingleLinkedList::Iterator SingleLinkedList::erase(SingleLinkedList::Iterator it) {
-    for (auto ptr = m_head; it != Iterator(nullptr) && ptr->getNext() != nullptr;) {
-        if (Iterator(ptr->getNext()) == it) {
-            auto newNext = ptr->getNext()->getNext();
-            delete ptr->getNext();
-            ptr->setNext(newNext);
+template <class T>
+typename SingleLinkedList<T>::Iterator SingleLinkedList<T>::erase(SingleLinkedList<T>::Iterator it) {
+    for (auto ptr = head; it != Iterator(nullptr) && ptr->next != nullptr;) {
+        if (Iterator(ptr->next) == it) {
+            auto newNext = ptr->next->next;
+            delete ptr->next;
+            ptr->next = newNext;
             return Iterator(newNext);
         } else {
-            ptr = ptr->getNext();
+            ptr = ptr->next;
         }
 
     }
-    return SingleLinkedList::Iterator(nullptr);
+    return SingleLinkedList<T>::Iterator(nullptr);
 }
 
 /*
  * home work
  */
-SingleLinkedList::Iterator SingleLinkedList::erase(SingleLinkedList::Iterator start, SingleLinkedList::Iterator end) {
-    return SingleLinkedList::Iterator(nullptr);
+template <class T>
+typename SingleLinkedList<T>::Iterator SingleLinkedList<T>::erase(SingleLinkedList<T>::Iterator start, SingleLinkedList<T>::Iterator end) {
+    return SingleLinkedList<T>::Iterator(nullptr);
 }
+
 
 

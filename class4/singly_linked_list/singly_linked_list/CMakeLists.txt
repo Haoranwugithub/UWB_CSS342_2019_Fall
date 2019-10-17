@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(a_shape)
+project(my_single_linked_list)
 
 set(CMAKE_CXX_STANDARD 17)
 

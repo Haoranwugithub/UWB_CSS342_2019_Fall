@@ -1,75 +1,71 @@
-#ifndef A_SHAPE_SINGLELINKEDLIST_H
-#define A_SHAPE_SINGLELINKEDLIST_H
+#ifndef _TESTTEMP_H_
+#define _TESTTEMP_H_
 
 #include "ListNode.h"
 #include <vector>
 
-using namespace std;
-
+template <class T>
 class SingleLinkedList {
 private:
-    ListNode *m_head;
+    ListNode<T> *head;
 
-    ListNode *_reverse_recursive(ListNode *);
+    ListNode<T> *_reverse_recursive(ListNode<T> *);
 
 public:
     SingleLinkedList() {
-        m_head = new ListNode();
+        head = new ListNode<T>();
     }
 
+    // copy constructor
     SingleLinkedList(SingleLinkedList &list);
 
     ~SingleLinkedList() {
-        while (m_head != nullptr) {
-            ListNode *curr = m_head;
-            m_head = m_head->getNext();
-            delete curr;
-        }
+        clear();
+        delete head;
     }
 
-    void add(int);
+    std::vector<T> toVector() const;
+    bool equal(SingleLinkedList &);
+    T size() const;
 
-    int count() const;
+    // add a node
+    void append(T);
+    void prepend(T);
+
+    // remove an end
+    void popHead();
+    void popTail();
+
+    // remove node(s)
+    bool remove(T val);
+    void clear();
 
     void reverse_iterative();
 
     void reverse_recursive();
 
-    vector<int> toVector() const;
-
-    bool equal(SingleLinkedList &);
-
-    // homework
-    void pushHead(int);
-
-    // homework
-    void popHead();
-
-    // homework
-    void popTail();
-
     class Iterator {
     private:
-        ListNode *m_currNode;
+        ListNode<T> *m_currNode;
     public:
-        Iterator(ListNode *);
+        Iterator(ListNode<T> *);
 
         Iterator &operator++() {
             if (m_currNode != nullptr) {
-                m_currNode = m_currNode->getNext();
+                m_currNode = m_currNode->next;
             }
 
             return *this;
         }
 
-        Iterator operator++(int) {
+        Iterator operator++(T) {
             Iterator it(*this);
             operator++();
             return it;
         }
 
-        int operator*() {
-            return m_currNode->getVal();
+        T operator*() {
+            return m_currNode->val;
         }
 
         bool operator!=(const Iterator &it) {
@@ -82,14 +78,12 @@ public:
 
     };
 
-    void remove(int val);
-
     Iterator erase(Iterator);
 
     Iterator erase(Iterator, Iterator);
 
     Iterator begin() {
-        return Iterator(m_head->getNext());
+        return Iterator(head->next);
     }
 
     Iterator end() {
@@ -97,16 +91,18 @@ public:
     }
 
     Iterator tail() {
-        if (m_head->getNext() == nullptr) {
+        if (head->next == nullptr) {
             return end();
         }
 
-        ListNode *ptr = m_head;
-        while (ptr->getNext() != nullptr) {
-            ptr = ptr->getNext();
+        ListNode<T> *ptr = head;
+        while (ptr->next != nullptr) {
+            ptr = ptr->next;
         }
         return Iterator(ptr);
     }
 };
 
-#endif //A_SHAPE_SINGLELINKEDLIST_H
+#include "SingleLinkedList.cpp"
+
+#endif
