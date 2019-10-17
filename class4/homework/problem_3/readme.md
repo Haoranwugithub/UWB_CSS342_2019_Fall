@@ -4,17 +4,17 @@ Use folder ```problem_3```.
 
 We all love our card bag examples right? well, here's your chance to contribute to it.
 
-### 1. (10pt) Add a maxArea() function to the Bag interface and class
+### 1. (10pt) Add a maxArea() function to the CardBag interface and class
 
 The bag can only contain cards of type either CircularCard or RectangularCard.
 
-In fact the maxArea has been added to ***src/BagInterface.h***
+In fact the maxArea has been added to ***src/CardBagInterface.h***
 
 ```C++
     virtual Card<T>* maxArea() = 0;
 ```
 
-The task is to complete the implementation of maxArea in ***src/Bag.h***. Skeleton code is already provided:
+The task is to complete the implementation of maxArea in ***src/CardBag.h***. Skeleton code is already provided:
 ```C++
     Card<T>* maxArea() override {
         // homework
