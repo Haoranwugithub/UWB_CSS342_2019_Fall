@@ -1,21 +1,21 @@
 #pragma once
 
-#include "BagInterface.h"
+#include "CardBagInterface.h"
 #include <list>
 
-template<class T>
-class Bag : BagInterface<T> {
+template <class T>
+class CardBag : CardBagInterface<T> {
 private:
-    std::list<T*> items;
+    std::list<Card<T>*> items;
     int capacity;
 public:
-    Bag() = delete;
+    CardBag() = delete;
 
-    ~Bag() {
+    ~CardBag() {
         items.clear();
     }
 
-    Bag(int capacity) : capacity(capacity) {
+    CardBag(int capacity) : capacity(capacity) {
     };
 
     int getCount() const override {
@@ -33,16 +33,16 @@ public:
         // return false;
     }
 
-    bool add(T *item) override {
+    bool add(Card<T> *item) override {
         bool can_add = !isFull();
         if (can_add) {
             items.push_back(item);
-            printf("address of the first element: %x, size: %ld\n", items.begin(), items.size());
+            printf("area: %f\n", item->area());
         }
         return can_add;
     };
 
-    bool remove(T *item) override {
+    bool remove(Card<T> *item) override {
         bool is_deleted = false;
         for (auto it = items.begin(); it != items.end(); it++) {
             if ((*it) == item) {
@@ -53,7 +53,7 @@ public:
         return is_deleted;
     };
 
-    bool contains(T *item) override {
+    bool contains(Card<T> *item) override {
         for (auto it = items.begin(); it != items.end(); it++) {
             if (*it == item) {
                 return true;
@@ -62,7 +62,7 @@ public:
         return false;
     };
 
-    T* maxArea() override {
+    Card<T>* maxArea() override {
         // homework
     }
 };
