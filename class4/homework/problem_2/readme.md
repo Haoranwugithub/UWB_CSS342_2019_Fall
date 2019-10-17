@@ -2,7 +2,7 @@
 
 Use folder ```problem_2```.
 
-We are working with a sorted singly linked list in this problem. A sorted singly linked list is similar to the regular singly linked list as we have seen in class and problem_1. The difference is values in a sorted singly linked list is always...well...sorted, and **in ascending order** in this problem. The interface of a sorted singly linked list class looks like this 
+We are working with a sorted singly linked list in this problem. A sorted singly linked list is similar to the regular singly linked list as we have seen in class and problem_1. The difference is values in a sorted singly linked list is always...well...sorted (values of nodes are sorted going from head to tail), and **in ascending order** in this problem. The interface of a sorted singly linked list class looks like this 
 ```C++
 template <class T>
 class SortedSingleLinkedList {
