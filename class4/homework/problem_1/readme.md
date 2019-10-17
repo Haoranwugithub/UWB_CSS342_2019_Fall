@@ -28,12 +28,47 @@ For example:
 
 
 2. (10pt) Write a unit test in ***test/unit_tests.cpp*** for your remove(T val) in task 1 to verify it works correctly. The following cases have to be verified in your tests:
+
 * input is empty
 * input has one element
 * input has more than one elements without duplicates
 * input has more than one elements with duplicates
 * input has more than one elements, all elements being the same values
 
-Your tests should verify both the correct elements are removed AND remove(T val) returns the correct boolean value.
+Your tests should verify both the correct elements are removed AND remove(T val) returns the correct boolean value. The skeleton code is provided:
+
+```C++
+TEST(sll_test, remove) {
+    // homework
+
+}
+```
 
 hint: ***TEST(sll_test, append)*** provided an exmaple how you can generate testing input, initialize a list object, call the function and compare result.
+
+3. (10pt) Implement the copy constructor in ***src/SingleLinkedList.cpp***
+```C++
+template <class T>
+SingleLinkedList<T>::SingleLinkedList(SingleLinkedList &list) {
+    // homework 
+}
+```
+This copy constructor does deep-copies. **Assume T could only be int, float or double.**
+
+
+4. (10pt) Add a unit test in ***test/unit_tests.cpp*** to verify the copy constructor you added from task 3 is correct. The following cases have to be verified in your tests:
+
+* input list is empty
+* input list has 1 node
+* input list has more than 1 nodes
+
+Your tests should verify correct number of nodes have been copied and each node has correct value. The skeleton code is provided
+
+```C++
+TEST(sll_test, constructor) {
+    // homework
+
+}
+```
+
+
