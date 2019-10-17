@@ -26,7 +26,7 @@ public:
 
     std::vector<T> toVector() const;
     bool equal(SingleLinkedList &);
-    T size() const;
+    int size() const;
 
     // add a node
     void append(T);

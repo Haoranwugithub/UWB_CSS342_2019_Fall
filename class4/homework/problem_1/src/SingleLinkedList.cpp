@@ -20,7 +20,7 @@ void SingleLinkedList<T>::prepend(T val) {
 
 
 template <class T>
-T SingleLinkedList<T>::size() const {
+int SingleLinkedList<T>::size() const {
     T count = 0;
     ListNode<T> *ptr = head;
     while (ptr->next != nullptr) {
