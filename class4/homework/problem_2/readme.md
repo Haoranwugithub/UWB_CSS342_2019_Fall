@@ -1,4 +1,4 @@
-## Sorted Singly Linked List
+## Sorted Singly Linked List (30pt)
 
 Use folder ```problem_2```.
 
