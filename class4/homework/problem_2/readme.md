@@ -27,14 +27,10 @@ public:
 };
 ```
 
-This list has two functions, insert(T) and void merge(SortedSingleLinkedList &) that are to be implemented in this homeowrk:
+This list has two functions, insert(T) and merge(SortedSingleLinkedList &) that are to be implemented in this homeowrk:
 
-### 1. (15pt) Implement insert(T) in ***src/SortedSingleLinkedList.cpp***
+### 1. (10pt) Implement insert(T) in ***src/SortedSingleLinkedList.cpp***
 ```C++
-/*
- * Removes all the nodes whose val equals the val in the parameter
- * Return true is any node was actually removed. False otherwise
- */
 template <class T>
 void SortedSingleLinkedList<T>::insert(T val){
     // homework
@@ -55,7 +51,7 @@ For example:
 *If the input list is 1->2->2->4, insert(3) will make the list 1->2->2->3->4
 
 
-### 2. (15pt) Write a unit test in ***test/unit_tests.cpp*** for your insert(T) in task 1 to verify it works correctly. The following cases have to be verified in your tests:
+### 2. (5pt) Write a unit test in ***test/unit_tests.cpp*** for your insert(T) in task 1 to verify it works correctly. The following cases have to be verified in your tests:
 
 * input is empty
 * input has one element
@@ -67,6 +63,35 @@ Your tests should verify both the correct elements are removed AND remove(T val)
 
 ```C++
 EST(sll_test, insert) {
+    // homework
+}
+```
+
+### 3. (10pt) Implement merge(SortedSingleLinkedList &) in ***src/SortedSingleLinkedList.cpp***
+```C++
+template<class T>
+void SortedSingleLinkedList<T>::merge(SortedSingleLinkedList &) {
+    // homework
+}
+```
+The skeleton code is already provided and should not be modified. 
+
+The merge(SortedSingleLinkedList &) function add all values from the list in the parameter to it's own list while ***maintaining the ascending order***. Merge should not change anything in the input list. 
+
+For example:
+
+*If current list is empty, and the other list is also empty, after merge the current list will still be empty
+*If the current list is 1->3, and the other list is 2->4, after merge the current list will be 1->2->3->4
+*If the current list is 1->3, and the other list is 4->5, after merge the current list will be 1->3->4->5
+*If the current list is 6->7->8, and the other list is 4->5, after merge the current list will be 4->5->6->7->8
+*If the current list is 3->3->8, and the other list is 2->5, after merge the current list will be 2->3->3->5->8
+
+### 2. (5pt) Write a unit test in ***test/unit_tests.cpp*** for your insert(T) in task 1 to verify it works correctly. The cases in the examples above all need to be verified in your test.
+
+The skeleton code is provided:
+
+```C++
+TEST(sll_test, merge) {
     // homework
 }
 ```
