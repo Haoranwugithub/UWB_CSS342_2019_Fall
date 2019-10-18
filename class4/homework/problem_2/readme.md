@@ -86,7 +86,7 @@ For example:
 * If the current list is 6->7->8, and the other list is 4->5, after merge the current list will be 4->5->6->7->8
 * If the current list is 3->3->8, and the other list is 2->5, after merge the current list will be 2->3->3->5->8
 
-### 2. (5pt) Write a unit test in ***test/unit_tests.cpp*** for your insert(T) in task 1 to verify it works correctly. The cases in the examples above all need to be verified in your test. One point for each case.
+### 4. (5pt) Write a unit test in ***test/unit_tests.cpp*** for your insert(T) in task 1 to verify it works correctly. The cases in the examples above all need to be verified in your test. One point for each case.
 
 The skeleton code is provided:
 
