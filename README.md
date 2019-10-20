@@ -120,10 +120,10 @@ The following table provides approximate, high-level ordering of topics, not all
 |  10/8, 10/10 | 3 | ADT design | C++ ch {8, 9, 12} |
 |  10/15, 10/17 | 4 | Linked list<br/>Iterator<br/>C++ Standard Template Library (STL) | C++ ch {6, 7, 13, 14} |
 |  10/22, 10/24 | 5 | Stack, Queue<br/>Recursion & Back tracking<br/>Midterm review | C++ ch {2, 5.3, 6, 13} |
-|  10/29, 10/31 | 6 | Midterm (2 hr on Tuesday)<br/>Guest lecture<br/>Math Induction<br/>Tree, Binary search tree if time allows | C++ ch 15, Math {8.1}, appendix E |
+|  10/29, 10/31 | 6 | Midterm (2 hr on Tuesday)<br/>Math Induction<br/>Tree, Binary search tree if time allows | C++ ch 15, Math {8.1}, appendix E |
 |  11/5, 11/7 | 7 | Hashtable<br/>hashing algorithm (including consistent hashing)<br/>Algorithm complexity analysis | C++ ch {10,18}, Math {7} |
 |  11/12, 11/14 | 8 | Sorting Algorithms | C++ ch 11 |
-|  11/19, 11/21 | 9 | Propositional Logic | Math {4} |
+|  11/19, 11/21 | 9 | Guest lecture<br/>Propositional Logic | Math {4} |
 |  11/26, 11/28 | 10 | Graph (topology sort)<br/>Thanksgiving | C++ {20} |
 |  12/3, 12/5 | 11 | Review/Buffer |  |
 |  12/10 | 12 | **Final (2hr)** |  |
