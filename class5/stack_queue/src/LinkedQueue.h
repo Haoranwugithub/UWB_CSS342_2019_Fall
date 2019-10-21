@@ -8,7 +8,7 @@
 template<class T>
 class LinkedQueue : public Queue<T> {
 private:
-    SingleLinkedList<T> *m_queue;
+    SingleLinkedList<T> *items;
 public:
     LinkedQueue();
 
@@ -27,41 +27,44 @@ public:
 
 template<class T>
 bool LinkedQueue<T>::isEmpty() const {
-    //return m_queue.count()==0; // what's wrong with this?
-    return m_queue->begin() == m_queue->end();
+    //return items.size()==0; // what's wrong with this?
+    return items->begin() == items->end();
 }
 
 template<class T>
 bool LinkedQueue<T>::enqueue(const T &val) {
-    m_queue->add(val);
+    items->append(val);
     return true;
 }
 
 template<class T>
 bool LinkedQueue<T>::dequeue() {
-    m_queue->popHead();
+    items->popHead();
     return true;
 }
 
 template<class T>
 T LinkedQueue<T>::peekFront() {
     assert(!isEmpty());
-    return *(m_queue->begin());
+    return *(items->begin());
 }
 
 template<class T>
 LinkedQueue<T>::~LinkedQueue() {
-    delete m_queue;
+    delete items;
 }
 
 template<class T>
 LinkedQueue<T>::LinkedQueue() {
-    m_queue = new SingleLinkedList<T>();
+    items = new SingleLinkedList<T>();
 }
 
 template<class T>
 LinkedQueue<T>::LinkedQueue(LinkedQueue &anotherQueue) {
-    m_queue = new SingleLinkedList<T>(*(anotherQueue.m_queue));
+    items = new SingleLinkedList<T>();
+    for (auto it = anotherQueue.items->begin(); it != anotherQueue.items->end(); it++) {
+        items->append(*it);
+    }
 }
 
 #endif //STACK_LINKEDQUEUE_H

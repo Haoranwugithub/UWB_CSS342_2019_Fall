@@ -1,12 +1,15 @@
 #include "LinkedQueue.h"
 #include "gtest/gtest.h"
 
-TEST(queue_test, test_is_empty) {
+TEST(queue_test, is_empty) {
     LinkedQueue<int> queue;
     ASSERT_TRUE(queue.isEmpty());
+
+    queue.enqueue(1);
+    ASSERT_FALSE(queue.isEmpty());
 }
 
-TEST(queue_test, test_enqueue) {
+TEST(queue_test, enqueue) {
     LinkedQueue<int> queue;
     queue.enqueue(1);
     ASSERT_FALSE(queue.isEmpty());
@@ -17,7 +20,7 @@ TEST(queue_test, test_enqueue) {
     ASSERT_EQ(queue.peekFront(), 1);
 }
 
-TEST(queue_test, test_dequeue) {
+TEST(queue_test, dequeue) {
     LinkedQueue<int> queue;
     queue.enqueue(1);
     queue.dequeue();
@@ -26,12 +29,15 @@ TEST(queue_test, test_dequeue) {
     queue.enqueue(2);
     queue.enqueue(3);
     queue.enqueue(4);
-    queue.enqueue(5); // why is this element needed?
     queue.dequeue();
     ASSERT_EQ(queue.peekFront(), 3);
+    queue.dequeue();
+    ASSERT_EQ(queue.peekFront(), 4);
+    queue.dequeue();
+    ASSERT_TRUE(queue.isEmpty());
 }
 
-TEST(queue_test, test_copy_constructor) {
+TEST(queue_test, copy_constructor) {
     LinkedQueue<int> queue;
     LinkedQueue<int> queue2(queue);
     ASSERT_TRUE(queue2.isEmpty());
@@ -50,7 +56,7 @@ TEST(queue_test, test_copy_constructor) {
     ASSERT_TRUE(queue.isEmpty() && queue3.isEmpty());
 }
 
-TEST(queue_test, test_peek) {
+TEST(queue_test, peek) {
     LinkedQueue<int> queue;
     ASSERT_DEATH(queue.peekFront(), ".*");
 
