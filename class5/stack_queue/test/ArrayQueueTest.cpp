@@ -71,7 +71,7 @@ TEST(queue_test, peek) {
 }
 
 TEST(queue_test, overflow) {
-    int testSize = 3;
+    int testSize = 4;
     ArrayQueue<int> queue(testSize);
     for (int i=0; i<testSize; i++) {
         ASSERT_TRUE(queue.enqueue(i+5));
@@ -80,8 +80,10 @@ TEST(queue_test, overflow) {
 
     ASSERT_TRUE(queue.dequeue());
     ASSERT_TRUE(queue.dequeue());
+    ASSERT_TRUE(queue.dequeue());
     ASSERT_EQ(queue.peekFront(), testSize-1+5);
     ASSERT_TRUE(queue.enqueue(99));
+    ASSERT_EQ(queue.peekFront(), testSize-1+5);
     ASSERT_TRUE(queue.dequeue());
     ASSERT_EQ(queue.peekFront(), 99);
 }
