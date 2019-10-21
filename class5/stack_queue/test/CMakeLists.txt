@@ -28,12 +28,12 @@ add_test(
         NAME
         StackUnitTests
         COMMAND
-        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/stack_tests
+        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/linked_stack_tests
 )
 
 add_test(
         NAME
         QueueUnitTests
         COMMAND
-        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/queue_tests
+        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/linked_queue_tests
 )
