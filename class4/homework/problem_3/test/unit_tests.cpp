@@ -115,3 +115,20 @@ TEST(bag_test, remove_card) {
 
     ASSERT_TRUE(cardBag.contains(&r1));
 }
+
+TEST(bag_test, example) {
+    FloatCardBag cardBag(3);
+
+    FloatRectangularCard r1(1, 2);
+    FloatCircularCard c1(3);
+    FloatCircularCard c2(4);
+
+    Card<float> ** cards = new Card<float>*[3];
+    cards[0] = &r1;
+    cards[1] = &c1;
+    cards[2] = &c2;
+
+    for (int i=0; i<3; i++) {
+        printf("%f\n", cards[i]->area());
+    }
+}
