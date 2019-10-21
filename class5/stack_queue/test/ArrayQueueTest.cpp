@@ -70,3 +70,18 @@ TEST(queue_test, peek) {
     ASSERT_EQ(queue.peekFront(), 2);
 }
 
+TEST(queue_test, overflow) {
+    int testSize = 3;
+    ArrayQueue<int> queue(testSize);
+    for (int i=0; i<testSize; i++) {
+        ASSERT_TRUE(queue.enqueue(i+5));
+    }
+    ASSERT_FALSE(queue.enqueue(testSize));
+
+    ASSERT_TRUE(queue.dequeue());
+    ASSERT_TRUE(queue.dequeue());
+    ASSERT_EQ(queue.peekFront(), testSize-1+5);
+    ASSERT_TRUE(queue.enqueue(99));
+    ASSERT_TRUE(queue.dequeue());
+    ASSERT_EQ(queue.peekFront(), 99);
+}
