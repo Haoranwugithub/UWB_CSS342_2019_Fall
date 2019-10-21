@@ -1,55 +1,41 @@
-#ifndef SINGLELINKEDLIST_H
-#define SINGLELINKEDLIST_H
+#ifndef _TESTTEMP_H_
+#define _TESTTEMP_H_
 
 #include "ListNode.h"
 #include <vector>
 
-using namespace std;
-
-template<class T>
+template <class T>
 class SingleLinkedList {
 private:
-    ListNode<T> *m_head;
-
-    ListNode<T> *_reverse_recursive(ListNode<T> *);
-
+    ListNode<T> *head;
 public:
     SingleLinkedList() {
-        m_head = new ListNode<T>();
+        head = new ListNode<T>();
     }
 
+    // copy constructor
     SingleLinkedList(SingleLinkedList &list);
 
     ~SingleLinkedList() {
-        while (m_head != nullptr) {
-            ListNode<T> *curr = m_head;
-            m_head = m_head->getNext();
-            delete curr;
-        }
+        clear();
+        delete head;
     }
 
-    void add(T);
-
-    void addToHead(T);
-
-    T count() const;
-
-    void reverse_iterative();
-
-    void reverse_recursive();
-
-    vector<T> toVector() const;
-
+    std::vector<T> toVector() const;
     bool equal(SingleLinkedList &);
+    T size() const;
 
-    // homework
-    void pushHead(T);
+    // add a node
+    void append(T);
+    void prepend(T);
 
-    // homework
+    // remove an end
     void popHead();
-
-    // homework
     void popTail();
+
+    // remove node(s)
+    bool remove(T val);
+    void clear();
 
     class Iterator {
     private:
@@ -59,8 +45,9 @@ public:
 
         Iterator &operator++() {
             if (m_currNode != nullptr) {
-                m_currNode = m_currNode->getNext();
+                m_currNode = m_currNode->next;
             }
+
             return *this;
         }
 
@@ -71,7 +58,7 @@ public:
         }
 
         T operator*() {
-            return m_currNode->getVal();
+            return m_currNode->val;
         }
 
         bool operator!=(const Iterator &it) {
@@ -84,28 +71,26 @@ public:
 
     };
 
-    void remove(T val);
-
     Iterator erase(Iterator);
 
     Iterator erase(Iterator, Iterator);
 
-    Iterator begin() const {
-        return Iterator(m_head->getNext());
+    Iterator begin() {
+        return Iterator(head->next);
     }
 
-    Iterator end() const {
+    Iterator end() {
         return Iterator(nullptr);
     }
 
     Iterator tail() {
-        if (m_head->getNext() == nullptr) {
+        if (head->next == nullptr) {
             return end();
         }
 
-        ListNode<T> *ptr = m_head;
-        while (ptr->getNext() != nullptr) {
-            ptr = ptr->getNext();
+        ListNode<T> *ptr = head;
+        while (ptr->next != nullptr) {
+            ptr = ptr->next;
         }
         return Iterator(ptr);
     }
@@ -113,4 +98,4 @@ public:
 
 #include "SingleLinkedList.cpp"
 
-#endif //SINGLELINKEDLIST_H
+#endif
