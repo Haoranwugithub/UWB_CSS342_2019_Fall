@@ -1,5 +1,5 @@
-#ifndef STACK_LINKEDSTACK_H
-#define STACK_LINKEDSTACK_H
+#ifndef STACK_ARRAYSTACK_H
+#define STACK_ARRAYSTACK_H
 
 #include "Stack.h"
 #include <cassert>
@@ -77,4 +77,4 @@ ArrayStack<T>::~ArrayStack() {
     delete [] items;
 }
 
-#endif //STACK_LINKEDSTACK_H
+#endif
