@@ -8,7 +8,7 @@
 template<class T>
 class LinkedStack : public Stack<T> {
 private:
-    SingleLinkedList<T> *m_stack;
+    SingleLinkedList<T> *items;
 public:
     LinkedStack();
 
@@ -27,46 +27,43 @@ public:
 
 template<class T>
 bool LinkedStack<T>::isEmpty() const {
-    return m_stack->begin() == m_stack->end();
+    return items->begin() == items->end();
 }
 
 template<class T>
 bool LinkedStack<T>::push(const T &val) {
-    m_stack->addToHead(val);
+    items->prepend(val);
     return true;
 }
 
 template<class T>
 bool LinkedStack<T>::pop() {
-    m_stack->popHead();
+    items->popHead();
     return true;
 }
 
 template<class T>
 T LinkedStack<T>::peek() const {
     assert(!isEmpty());
-    return *(m_stack->begin());
+    return *(items->begin());
 }
 
 template<class T>
 LinkedStack<T>::LinkedStack(LinkedStack<T> &anotherStack) {
-    /*
-    m_stack = new SingleLinkedList<T>();
-    for (auto it = anotherStack.m_stack->begin(); it != anotherStack.m_stack->end(); it++) {
-        m_stack->add(*it);
+    items = new SingleLinkedList<T>();
+    for (auto it = anotherStack.items->begin(); it != anotherStack.items->end(); it++) {
+        items->append(*it);
     }
-     */
-    m_stack = new SingleLinkedList<T>(*(anotherStack.m_stack));
 }
 
 template<class T>
 LinkedStack<T>::LinkedStack() {
-    m_stack = new SingleLinkedList<T>();
+    items = new SingleLinkedList<T>();
 }
 
 template<class T>
 LinkedStack<T>::~LinkedStack() {
-    delete m_stack;
+    delete items;
 }
 
 #endif //STACK_LINKEDSTACK_H

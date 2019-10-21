@@ -1,7 +1,7 @@
 #include "LinkedStack.h"
 #include "gtest/gtest.h"
 
-TEST(stack_test, test_is_empty) {
+TEST(stack_test, is_empty) {
     LinkedStack<int> stack;
     ASSERT_TRUE(stack.isEmpty());
 
@@ -12,7 +12,7 @@ TEST(stack_test, test_is_empty) {
     ASSERT_TRUE(stack.isEmpty());
 }
 
-TEST(stack_test, test_push) {
+TEST(stack_test, push) {
     LinkedStack<int> stack;
     stack.push(1);
     ASSERT_FALSE(stack.isEmpty());
@@ -23,7 +23,7 @@ TEST(stack_test, test_push) {
     ASSERT_EQ(stack.peek(), 3);
 }
 
-TEST(stack_test, test_pop) {
+TEST(stack_test, pop) {
     LinkedStack<int> stack;
     stack.push(1);
     stack.pop();
@@ -31,13 +31,11 @@ TEST(stack_test, test_pop) {
 
     stack.push(2);
     stack.push(3);
-    stack.push(4);
-    stack.push(5);
     stack.pop();
-    ASSERT_EQ(stack.peek(), 4);
+    ASSERT_EQ(stack.peek(), 2);
 }
 
-TEST(stack_test, test_peek) {
+TEST(stack_test, peek) {
     LinkedStack<int> stack;
     ASSERT_DEATH(stack.peek(), ".*");
 
@@ -51,7 +49,7 @@ TEST(stack_test, test_peek) {
     ASSERT_EQ(stack.peek(), 1);
 }
 
-TEST(stack_test, test_copy_constructor) {
+TEST(stack_test, copy_constructor) {
     LinkedStack<int> stack;
     LinkedStack<int> stack2(stack);
     ASSERT_TRUE(stack2.isEmpty());
