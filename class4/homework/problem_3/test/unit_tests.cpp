@@ -131,4 +131,6 @@ TEST(bag_test, example) {
     for (int i=0; i<3; i++) {
         printf("%f\n", cards[i]->area());
     }
+
+	delete [] cards;
 }

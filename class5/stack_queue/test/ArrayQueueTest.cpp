@@ -74,16 +74,17 @@ TEST(queue_test, overflow) {
     int testSize = 4;
     ArrayQueue<int> queue(testSize);
     for (int i=0; i<testSize; i++) {
+		// add 5,6,7,8 to the queue
         ASSERT_TRUE(queue.enqueue(i+5));
     }
     ASSERT_FALSE(queue.enqueue(testSize));
 
-    ASSERT_TRUE(queue.dequeue());
-    ASSERT_TRUE(queue.dequeue());
-    ASSERT_TRUE(queue.dequeue());
+    ASSERT_TRUE(queue.dequeue());	// 6,7,8
+    ASSERT_TRUE(queue.dequeue());	// 7,8
+    ASSERT_TRUE(queue.dequeue());	// 8
     ASSERT_EQ(queue.peekFront(), testSize-1+5);
-    ASSERT_TRUE(queue.enqueue(99));
+    ASSERT_TRUE(queue.enqueue(99));	// 8,99
     ASSERT_EQ(queue.peekFront(), testSize-1+5);
-    ASSERT_TRUE(queue.dequeue());
+    ASSERT_TRUE(queue.dequeue()); 	// 99
     ASSERT_EQ(queue.peekFront(), 99);
 }
