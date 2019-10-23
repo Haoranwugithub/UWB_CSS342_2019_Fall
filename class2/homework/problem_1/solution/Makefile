@@ -10,7 +10,7 @@ homework1.o: homework1.cpp
 	$(CC) $(FLAGS) -c homework1.cpp -o homework1.o 
 
 test.x: test.o homework1.o
-	$(CC) $(FLAGS) homework1.o test.o -o text.x 
+	$(CC) $(FLAGS) homework1.o test.o -o test.x 
 
 clean:
 	rm *.x *.o
