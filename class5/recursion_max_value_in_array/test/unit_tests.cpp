@@ -27,6 +27,7 @@ int max_recursive(int* array, int size) {
 
     int v1 = array[0];
     int v2 = max_recursive(array+1, size-1);
+    printf("comparing %d vs %d\n", v1, v2);
     return (v1<v2) ? v2 : v1;
 }
 
@@ -46,6 +47,7 @@ int max_using_a_stack(int* array, int size) {
         int v1 = stack.peek();
         stack.pop();
 
+        printf("comparing %d vs %d\n", v1, v2);
         if (v1 > v2) {
             v2 = v1;
         }
@@ -54,9 +56,9 @@ int max_using_a_stack(int* array, int size) {
     return v2;
 }
 
-#define ITERATIVE
+//#define ITERATIVE
 //#define RECURSIVE
-//#define STACK
+#define STACK
 
 int max(int* array, int size) {
 #ifdef ITERATIVE
