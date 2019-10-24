@@ -6,14 +6,16 @@
 int max_iterative(int* array, int size) {
     precheck;
 
-    int max = array[0];
-    for (int i=0; i<size; i++) {
-        if (max < array[i]) {
-            max = array[i];
+    int v1 = array[0];
+    for (int i=1; i<size; i++) {
+        int v2 = array[i];
+        printf("comparing %d vs %d\n", v1, v2);
+        if (v1 < v2) {
+            v1 = v2;
         }
     }
 
-    return max;
+    return v1;
 }
 
 int max_recursive(int* array, int size) {
@@ -52,10 +54,20 @@ int max_using_a_stack(int* array, int size) {
     return v2;
 }
 
+#define ITERATIVE
+//#define RECURSIVE
+//#define STACK
+
 int max(int* array, int size) {
-//    return max_iterative(array, size);
-//    return max_recursive(array, size);
+#ifdef ITERATIVE
+    return max_iterative(array, size);
+#endif
+#ifdef RECURSIVE
+    return max_recursive(array, size);
+#endif
+#ifdef STACK
     return max_using_a_stack(array, size);
+#endif
 }
 
 TEST(test, one) {
@@ -81,4 +93,9 @@ TEST(test, more_than_two) {
     for (int i=0; i<testSize; i++) {
         ASSERT_EQ(max(array1[i], testSize), 3);
     }
+}
+
+TEST(test, in_class_demo) {
+    int array[]={3,2,9,2,5,1};
+    ASSERT_EQ(max(array, 6), 9);
 }
