@@ -1,4 +1,4 @@
-## Find the largest card in the bag (30pt)
+## Find the largest card in the bag (20pt)
 
 Use folder ```problem_3```.
 
