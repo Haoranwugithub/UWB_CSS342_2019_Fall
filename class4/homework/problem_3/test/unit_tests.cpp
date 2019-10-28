@@ -33,7 +33,7 @@ TEST(bag_test, add_card) {
 
     ASSERT_TRUE(cardBag.add(&r1));
     ASSERT_TRUE(cardBag.add(&c1));
-    ASSERT_FALSE(cardBag.add(&c2));
+    ASSERT_TRUE(cardBag.add(&c2));
     ASSERT_EQ(cardBag.getCount(), 3);
 }
 
