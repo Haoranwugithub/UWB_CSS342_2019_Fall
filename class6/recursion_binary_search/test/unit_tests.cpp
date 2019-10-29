@@ -1,11 +1,16 @@
 #include "gtest/gtest.h"
 
+int midPoint(int start, int end) {
+    //return start + (end - start) / 2;
+    return (start + end) / 2;
+}
+
 int* binarySearch(int* data, int start, int end, int x) {
     if (start>end) {
         return nullptr;
     }
 
-    int midIdx = start + (end - start) / 2;
+    int midIdx = midPoint(start, end);
     if (data[midIdx] == x) {
         return data+midIdx;
     }
@@ -51,8 +56,37 @@ TEST(test, multiple) {
     }
 }
 
+TEST(test, not_found) {
+    int array[]={1,3,4,6,8,9};
+    int* ret = binarySearch(array, 0, 5, -1);
+    ASSERT_EQ(ret, nullptr);
+}
+
 TEST(test, in_class_demo) {
     int array[]={1,3,4,6,8,9};
     int* ret = binarySearch(array, 0, 5, 9);
     ASSERT_EQ(*ret, 9);
+}
+
+TEST(test, in_class_demo_overflow) {
+    int testSize = INT32_MAX;
+
+    printf("sizeof(int)=%d\n", sizeof(int));
+    printf("test size (INT_MAX32) is %d\n", testSize);
+
+    int* array = new int[INT32_MAX];
+
+    for (int i=0; i<INT32_MAX; i++) {
+        array[i] = i;
+    }
+
+    int target = 2;
+    int* ret = binarySearch(array, 0, testSize-1, target);
+    ASSERT_EQ(*ret, target);
+
+    target = testSize-2;
+    ret = binarySearch(array, 0, testSize-1, target);
+    ASSERT_EQ(*ret, target);
+
+    delete []array;
 }
