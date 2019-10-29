@@ -2,6 +2,7 @@
 
 #include "CardBagInterface.h"
 #include <list>
+#include <iostream>
 
 template <class T>
 class CardBag : CardBagInterface<T> {
