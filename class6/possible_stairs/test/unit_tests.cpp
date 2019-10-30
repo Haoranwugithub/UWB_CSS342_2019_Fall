@@ -13,7 +13,7 @@ TEST(test_recursive, three) {
 }
 
 TEST(test_recursive, four) {
-    ASSERT_EQ(possibleStairsRecursive(4), 10946);
+    ASSERT_EQ(possibleStairsRecursive(20), 10946);
 }
 
 TEST(test_recursive, in_class_demo ) {
