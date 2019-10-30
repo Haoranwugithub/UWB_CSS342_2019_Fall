@@ -57,8 +57,8 @@ int max_using_a_stack(int* array, int size) {
 }
 
 //#define ITERATIVE
-//#define RECURSIVE
-#define STACK
+#define RECURSIVE
+//#define STACK
 
 int max(int* array, int size) {
 #ifdef ITERATIVE
