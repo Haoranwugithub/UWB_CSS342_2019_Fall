@@ -76,6 +76,7 @@ TEST(bag_test, is_full) {
     ASSERT_TRUE(bag.isFull());
 }
 
+/*
 TEST(bag_test, remove_card) {
     FloatRectangularCard r1(1, 2);
     FloatRectangularCard r2(3, 4);
@@ -115,6 +116,7 @@ TEST(bag_test, remove_card) {
 
     ASSERT_TRUE(cardBag.contains(&r1));
 }
+ */
 
 TEST(bag_test, example) {
     FloatCardBag cardBag(3);
