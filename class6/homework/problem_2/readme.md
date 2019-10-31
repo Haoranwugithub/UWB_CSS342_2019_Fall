@@ -17,7 +17,7 @@ reverse_recursive() reverse the order of node (**not just the value**) in a link
 * If the list has 1->2->3, after calling the reverse_recursive() the list will be 3->2->1
 * If the list has 1->2->3->4, after calling the reverse_recursive() the list will be 4->3->2->1
 
-reverse_iterative() works "in-place" which means no new node should be created during the process. 
+reverse_recursive() works "in-place" which means no new node should be created during the process. 
 
 no loop such as for, while, etc. can be used.
 
