@@ -1,8 +1,8 @@
-## Reverse A Stack Using Recursion (40pt)
+## Reverse A Stack Using Recursion (45pt)
 
 Use folder ```problem_1```.
 
-### 1. (40pt) Implement reverse_stack_recursively(Stack<int> &stack) in ***src/Homework.h***
+### 1. (25pt) Implement reverse_stack_recursively(Stack<int> &stack) in ***src/Homework.h***
 ```c++
 void reverse_stack_recursively(Stack<int> &stack) {
     // homework
