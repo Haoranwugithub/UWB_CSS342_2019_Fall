@@ -2,7 +2,7 @@
 
 Use folder ```problem_1```.
 
-### 1. (25pt) Implement reverse_stack_recursively(Stack<int> &stack) in ***src/Homework.h***
+### 1. (15pt) Implement reverse_stack_recursively(Stack<int> &stack) in ***src/Homework.h***
 ```c++
 void reverse_stack_recursively(Stack<int> &stack) {
     // homework
@@ -22,5 +22,5 @@ For example:
 * input stack: (top on the left, bottom on the right): [0, 2, 2, 3], after the reversal: [3, 2, 2, 0]
 
 
-### 2. (20pt) Write unit tests in ***test/HomeworkTest.cpp*** for your reverse_stack_recursively(Stack<int> &) in task 1 to verify it works correctly.
+### 2. (15pt) Write unit tests in ***test/HomeworkTest.cpp*** for your reverse_stack_recursively(Stack<int> &) in task 1 to verify it works correctly.
 All the above cases should be verified.
