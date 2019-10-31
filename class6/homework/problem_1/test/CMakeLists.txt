@@ -1,6 +1,5 @@
 add_executable(linked_list_tests main.cpp LinkedListTest.cpp)
 add_executable(linked_stack_tests main.cpp LinkedStackTest.cpp)
-add_executable(linked_queue_tests main.cpp LinkedQueueTest.cpp)
 add_executable(homework_tests main.cpp HomeworkTest.cpp)
 
 include_directories(${CMAKE_LIBRARY_PATH})
@@ -12,10 +11,6 @@ target_link_libraries(
 
 target_link_libraries(
         linked_stack_tests
-        gtest)
-
-target_link_libraries(
-        linked_queue_tests
         gtest)
 
 target_link_libraries(
@@ -34,13 +29,6 @@ add_test(
         LinkedStackUnitTests
         COMMAND
         ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/linked_stack_tests
-)
-
-add_test(
-        NAME
-        LinkedQueueUnitTests
-        COMMAND
-        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/linked_queue_tests
 )
 
 add_test(
