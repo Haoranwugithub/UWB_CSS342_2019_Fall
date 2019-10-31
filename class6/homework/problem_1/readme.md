@@ -2,7 +2,7 @@
 
 Use folder ```problem_1```.
 
-### 1. (20pt) Implement reverse_stack_recursively(Stack<int> &stack) in ***src/Homework.h***
+### 1. (40pt) Implement reverse_stack_recursively(Stack<int> &stack) in ***src/Homework.h***
 ```c++
 void reverse_stack_recursively(Stack<int> &stack) {
     // homework
