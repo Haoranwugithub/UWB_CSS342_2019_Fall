@@ -1,8 +1,8 @@
-## Complete the Singly Linked List (40pt)
+## Complete the Singly Linked List (45pt)
 
 Use folder ```problem_2```.
 
-### 5. (20pt) Implement the linked list reversal in ***test/unit_tests.cpp***
+### 1. (40pt) Implement the linked list reversal in ***test/unit_tests.cpp***
 ```C++
 template <class T>
 void SingleLinkedList<T>::reverse_recursive() {
