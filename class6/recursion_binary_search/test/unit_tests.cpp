@@ -11,6 +11,7 @@ int* binarySearch(int* data, int start, int end, int x) {
     }
 
     int midIdx = midPoint(start, end);
+    printf("start=%d, end=%d, mid=%d\n", start, end, midIdx);
     if (data[midIdx] == x) {
         return data+midIdx;
     }
@@ -68,7 +69,7 @@ TEST(test, in_class_demo) {
     ASSERT_EQ(*ret, 9);
 }
 
-TEST(test, in_class_demo_overflow) {
+TEST(test, in_class_large_demo) {
     int testSize = INT32_MAX;
 
     printf("sizeof(int)=%d\n", sizeof(int));
