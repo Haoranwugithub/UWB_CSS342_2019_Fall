@@ -1,7 +1,4 @@
 long possiblePathsRecursive(int M, int N) {
-    int mPaths = 0;
-    int nPaths = 0;
-
     if (M==0 || N==0) {
         return 0;
     }

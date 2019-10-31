@@ -17,4 +17,10 @@ TEST(test_recursive, one) {
 TEST(test_recursive, demo) {
     ASSERT_EQ(possiblePathsRecursive(3, 2), 3);
     ASSERT_EQ(possiblePathsRecursive(7, 3), 28);
+    ASSERT_EQ(possiblePathsRecursive(2, 4), 4);
+
+    ASSERT_EQ(possiblePathsRecursive(2, 5), 5);
+    ASSERT_EQ(possiblePathsRecursive(3, 4), 10);
+    ASSERT_EQ(possiblePathsRecursive(3, 5), 15);
 }
+
