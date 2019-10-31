@@ -1,4 +1,4 @@
-## Reverse A Stack Using Recursion (40pt)
+## Reverse A Stack Using Recursion (30pt)
 
 Use folder ```problem_1```.
 
