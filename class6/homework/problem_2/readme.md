@@ -21,12 +21,12 @@ reverse_iterative() works "in-place" which means no new node should be created d
 
 The unit test for your reverse_iterative() is already provided in ***src/unit_tests.cpp***
 ```C++
-TEST(sll_test, reverse_iterative) {
-    ASSERT_TRUE(test_reverse_iterative_n(0));
-    ASSERT_TRUE(test_reverse_iterative_n(1));
-    ASSERT_TRUE(test_reverse_iterative_n(2));
-    ASSERT_TRUE(test_reverse_iterative_n(3));
-    ASSERT_TRUE(test_reverse_iterative_n(4));
+TEST(sll_test, reverse_recursive) {
+    ASSERT_TRUE(test_reverse_recursive_n(0));
+    ASSERT_TRUE(test_reverse_recursive_n(1));
+    ASSERT_TRUE(test_reverse_recursive_n(2));
+    ASSERT_TRUE(test_reverse_recursive_n(3));
+    ASSERT_TRUE(test_reverse_recursive_n(4));
 }
 ```
 
