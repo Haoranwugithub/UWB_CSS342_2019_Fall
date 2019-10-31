@@ -21,7 +21,7 @@ reverse_iterative() works "in-place" which means no new node should be created d
 
 no loop such as for, while, etc. can be used.
 
-The unit test for your reverse_iterative() is already provided in ***src/unit_tests.cpp***
+The unit test for your reverse_recursive() is already provided in ***src/unit_tests.cpp***
 ```C++
 TEST(sll_test, reverse_recursive) {
     ASSERT_TRUE(test_reverse_recursive_n(0));
@@ -32,6 +32,6 @@ TEST(sll_test, reverse_recursive) {
 }
 ```
 
-Your reverse_iterative() should pass all of these test cases.
+Your reverse_recursive() should pass all of these test cases.
 
 
