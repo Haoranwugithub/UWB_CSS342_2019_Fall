@@ -1,6 +1,6 @@
 * Info:
-    - Assigned: 10/32/2019
-    - Due: **11/10/2019 Sunday 11:59pm**
+    - Assigned: 10/31/2019
+    - Due: **11/9/2019 Saturday 11:59pm**
     - Submission via Canvas
     - Your code will be graded on my Ubuntu Linux.  **Before** submitting your work, make sure your code works on this platform especially if you code on another platform like Windows. Simple rule of judgement: If *make* does not produce an executable (compiler warning is ok) for that problem, it's considered as **DNC(Does Not Compile)** for this problem. Starting from the next homework, you will loose **ALL** of the points for that problem if your code does not compile. 
     - Your work will be graded as following:
