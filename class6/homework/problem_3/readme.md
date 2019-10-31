@@ -10,9 +10,9 @@ long possiblePathsIterative(int M, int N) {
 }
 ```
 
-This function return the number of possible and unique ways to go from the top left cell to bottom right cell in an M columns by N rows grid. One can only move either down or right at any point in time.
+This function return the number of possible and unique ways to go from the top left cell to bottom right cell in an M columns by N rows grid. One can only move either down or right at any point in time. This is the same example you see in class on 10/31/2019.
 
-Unit tests are provided in test/unit_tests.cpp. They should all pass. 
+Unit tests are provided in test/unit_tests.cpp. They should all pass with your possiblePathsIterative(...).
 
 ### 2. (10pt) Create an account at https://github.com/ and create a new **public** repository
 
