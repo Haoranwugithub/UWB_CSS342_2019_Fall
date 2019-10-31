@@ -2,32 +2,19 @@
 
 #include "possible_paths.h"
 
-TEST(test_recursive, zero_one_and_two) {
-    for (int i=0; i<3; i++) {
-        ASSERT_EQ(possibleStairsRecursive(1), 1);
-    }
+TEST(test_recursive, zero) {
+    ASSERT_EQ(possiblePathsRecursive(0, 0), 0);
+    ASSERT_EQ(possiblePathsRecursive(0, 1), 0);
+    ASSERT_EQ(possiblePathsRecursive(0, 1), 0);
 }
 
-TEST(test_recursive, three) {
-    ASSERT_EQ(possibleStairsRecursive(3), 3);
+TEST(test_recursive, one) {
+    ASSERT_EQ(possiblePathsRecursive(1, 1), 1);
+    ASSERT_EQ(possiblePathsRecursive(1, 2), 1);
+    ASSERT_EQ(possiblePathsRecursive(2, 1), 1);
 }
 
-TEST(test_recursive, four) {
-    ASSERT_EQ(possibleStairsRecursive(20), 10946);
-}
-
-TEST(test_recursive, in_class_demo ) {
-    int testSize = 30;
-    long ways = possibleStairsIterative(testSize);
-    printf("there are %ld ways for size %d\n", ways, testSize);
-}
-
-TEST(test_iterative, zero_one_and_two) {
-    for (int i=0; i<3; i++) {
-        ASSERT_EQ(possibleStairsIterative(1), 1);
-    }
-}
-
-TEST(test_iterative, four) {
-    ASSERT_EQ(possibleStairsIterative(20), 10946);
+TEST(test_recursive, demo) {
+    ASSERT_EQ(possiblePathsRecursive(3, 2), 3);
+    ASSERT_EQ(possiblePathsRecursive(7, 3), 28);
 }
