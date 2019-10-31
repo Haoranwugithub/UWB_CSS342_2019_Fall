@@ -1,11 +1,6 @@
 #include "SingleLinkedList.h"
 
 template <class T>
-void SingleLinkedList<T>::reverse_recursive() {
-    // homework
-}
-
-template <class T>
 void SingleLinkedList<T>::append(T val){
     ListNode<T> *ptr = head;
 

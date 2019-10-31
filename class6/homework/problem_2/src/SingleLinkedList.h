@@ -40,7 +40,7 @@ public:
     bool remove(T val);
     void clear();
 
-    void reverse_iterative();
+    void reverse_recursive();
 
     class Iterator {
     private:

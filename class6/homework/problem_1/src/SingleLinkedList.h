@@ -37,9 +37,6 @@ public:
     bool remove(T val);
     void clear();
 
-    // reverse
-    void reverse_recursive();
-
     class Iterator {
     private:
         ListNode<T> *m_currNode;

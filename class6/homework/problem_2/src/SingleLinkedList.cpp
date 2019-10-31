@@ -55,7 +55,7 @@ std::vector<T> SingleLinkedList<T>::toVector() const {
 }
 
 template <class T>
-void SingleLinkedList<T>::reverse_iterative() {
+void SingleLinkedList<T>::reverse_recursive(){
     // homework
 }
 

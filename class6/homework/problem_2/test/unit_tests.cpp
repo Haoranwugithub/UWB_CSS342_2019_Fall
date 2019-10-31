@@ -121,7 +121,7 @@ TEST(sll_test, test_equal) {
     ASSERT_TRUE(list1.equal(list2));
 }
 
-bool test_reverse_iterative_n(int n) {
+bool test_reverse_recursive_n(int n) {
     SingleLinkedList<int> list;
     for (int i = 0; i < n; i++) {
         list.append(i);
@@ -132,17 +132,17 @@ bool test_reverse_iterative_n(int n) {
         revList.append(i);
     }
 
-    list.reverse_iterative();
+    list.reverse_recursive();
 
     return list.equal(revList);
 }
 
-TEST(sll_test, reverse_iterative) {
-    ASSERT_TRUE(test_reverse_iterative_n(0));
-    ASSERT_TRUE(test_reverse_iterative_n(1));
-    ASSERT_TRUE(test_reverse_iterative_n(2));
-    ASSERT_TRUE(test_reverse_iterative_n(3));
-    ASSERT_TRUE(test_reverse_iterative_n(4));
+TEST(sll_test, reverse_recursive) {
+    ASSERT_TRUE(test_reverse_recursive_n(0));
+    ASSERT_TRUE(test_reverse_recursive_n(1));
+    ASSERT_TRUE(test_reverse_recursive_n(2));
+    ASSERT_TRUE(test_reverse_recursive_n(3));
+    ASSERT_TRUE(test_reverse_recursive_n(4));
 }
 
 TEST(sll_test, iterator_begin_end_demo) {

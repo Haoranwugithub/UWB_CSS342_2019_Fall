@@ -137,27 +137,3 @@ TEST(sll_test, iterator_begin_end_demo) {
         i++;
     }
 }
-
-bool test_reverse_recursive_n(int n) {
-    SingleLinkedList<int> list;
-    for (int i = 0; i < n; i++) {
-        list.append(i);
-    }
-
-    SingleLinkedList<int> revList;
-    for (int i = n - 1; i >= 0; i--) {
-        revList.append(i);
-    }
-
-    list.reverse_recursive();
-
-    return list.equal(revList);
-}
-
-TEST(sll_test, reverse_iterative) {
-    ASSERT_TRUE(test_reverse_recursive_n(0));
-    ASSERT_TRUE(test_reverse_recursive_n(1));
-    ASSERT_TRUE(test_reverse_recursive_n(2));
-    ASSERT_TRUE(test_reverse_recursive_n(3));
-    ASSERT_TRUE(test_reverse_recursive_n(4));
-}
