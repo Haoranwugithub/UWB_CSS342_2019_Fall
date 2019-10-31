@@ -10,14 +10,16 @@ void SingleLinkedList<T>::reverse_recursive() {
 }
 ```
 
-reverse_iterative() reverse the order of node (**not just the value**) in a linked list. For example:
+reverse_recursive() reverse the order of node (**not just the value**) in a linked list using recursion. For example:
 
-* If the list is empty, after calling the reverse_iterative() the list will still be empty
-* If the list has 1, after calling the reverse_iterative() the list will be 1
-* If the list has 1->2->3, after calling the reverse_iterative() the list will be 3->2->1
-* If the list has 1->2->3->4, after calling the reverse_iterative() the list will be 4->3->2->1
+* If the list is empty, after calling the reverse_recursive() the list will still be empty
+* If the list has 1, after calling the reverse_recursive() the list will be 1
+* If the list has 1->2->3, after calling the reverse_recursive() the list will be 3->2->1
+* If the list has 1->2->3->4, after calling the reverse_recursive() the list will be 4->3->2->1
 
 reverse_iterative() works "in-place" which means no new node should be created during the process. 
+
+no loop such as for, while, etc. can be used.
 
 The unit test for your reverse_iterative() is already provided in ***src/unit_tests.cpp***
 ```C++
