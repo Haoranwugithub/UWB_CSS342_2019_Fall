@@ -1,7 +1,6 @@
 #include "gtest/gtest.h"
 
 int midPoint(int start, int end) {
-    //return start + (end - start) / 2;
     return (start + end) / 2;
 }
 
@@ -33,6 +32,7 @@ TEST(test, one) {
     ret = binarySearch(array, 0, 0, 2);
     ASSERT_EQ(ret, nullptr);
 }
+//return start + (end - start) / 2;
 
 TEST(test, two) {
     int array[]={1, 2};
