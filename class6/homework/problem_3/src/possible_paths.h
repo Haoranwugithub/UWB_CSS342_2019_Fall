@@ -9,3 +9,8 @@ long possiblePathsRecursive(int M, int N) {
 
     return possiblePathsRecursive(M-1, N) + possiblePathsRecursive(M, N-1);
 }
+
+long possiblePathsIterative(int M, int N) {
+    // homework
+    return 0; // place holder
+}
