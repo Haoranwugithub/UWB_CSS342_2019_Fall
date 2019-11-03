@@ -112,8 +112,21 @@ SingleLinkedList<T>::Iterator::Iterator(ListNode<T> *currNode) : m_currNode(curr
  */
 template <class T>
 bool SingleLinkedList<T>::remove(T val) {
-    // homework
-    return false; // place holder. change this in your homework
+    ListNode<T>* p0 = head;
+    bool removedAny = false;
+
+    while (p0->next!=nullptr) {
+        if (p0->next->val == val) {
+            ListNode<T>* pNext = p0->next;
+            p0->next = pNext->next;
+            delete(pNext);
+            removedAny = true;
+            continue;
+        }
+        p0 = p0->next;
+    }
+
+    return removedAny;
 }
 
 template <class T>

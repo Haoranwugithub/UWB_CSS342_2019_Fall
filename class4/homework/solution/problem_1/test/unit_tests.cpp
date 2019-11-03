@@ -90,9 +90,64 @@ TEST(sll_test, poptail) {
     ASSERT_TRUE(answer== list.toVector());
 }
 
-TEST(sll_test, remove) {
-    // homework
+TEST(sll_test, remove_multiple_no_dup) {
+    SingleLinkedList<int> list;
 
+    std::vector<int> answer;
+    for (int i=0; i<5; i++) {
+        list.append(i);
+        answer.push_back(i);
+    }
+
+    ASSERT_FALSE(list.remove(9));
+
+    ASSERT_TRUE(list.remove(0));
+    answer.erase(answer.begin());
+    ASSERT_TRUE(list.toVector()==answer);
+
+    ASSERT_TRUE(list.remove(4));
+    answer.erase(answer.begin()+3);
+    ASSERT_TRUE(list.toVector()==answer);
+
+    ASSERT_TRUE(list.remove(2));
+    answer.erase(answer.begin()+1);
+    ASSERT_TRUE(list.toVector()==answer);
+}
+
+TEST(sll_test, remove_multiple_has_dup) {
+    SingleLinkedList<int> list;
+    int data[]{0,1,1,2,2,1,1};
+
+    std::vector<int> answer;
+    int size = sizeof(data)/sizeof(int);
+    for (int i=0; i<size; i++) {
+        list.append(i);
+        answer.push_back(i);
+    }
+
+    ASSERT_FALSE(list.remove(9));
+
+    ASSERT_TRUE(list.remove(2));
+
+    // how to erase data from std::vector by value: shorturl.at/bknz6
+    answer.erase(std::remove(answer.begin(), answer.end(), 2), answer.end());
+    ASSERT_TRUE(list.toVector()==answer);
+
+    ASSERT_TRUE(list.remove(1));
+    answer.erase(std::remove(answer.begin(), answer.end(), 1), answer.end());
+    ASSERT_TRUE(list.toVector()==answer);
+}
+
+TEST(sll_test, remove_zero_and_one) {
+    // empty list
+    SingleLinkedList<int> list;
+    ASSERT_FALSE(list.remove(0));
+
+    // one element
+    list.append(1);
+    ASSERT_FALSE(list.remove(2));
+    ASSERT_TRUE(list.remove(1));
+    ASSERT_EQ(list.size(), 0);
 }
 
 TEST(sll_test, constructor) {
@@ -146,7 +201,6 @@ TEST(sll_test, reverse_iterative) {
 }
 
 TEST(sll_test, iterator_begin_end_demo) {
-
     SingleLinkedList<int> list;
     std::vector input = std::vector<int>{4, 3, 4, 4, 5, 4, 4};
     for (int i = 0; i < input.size(); i++) {
