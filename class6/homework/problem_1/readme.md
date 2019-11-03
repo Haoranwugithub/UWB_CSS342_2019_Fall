@@ -11,7 +11,7 @@ void reverse_stack_recursively(Stack<int> &stack) {
 
 - This function takes a stack (reference) and reverse its content using recursion. 
 - Any loop such as for, while is not allowed. You will not receive any point if you use any loop.
-- You can only use the provided Stack implementation.
+- You can only use the provided Stack implementation aka LinkedStack.
 
 For example:
 
