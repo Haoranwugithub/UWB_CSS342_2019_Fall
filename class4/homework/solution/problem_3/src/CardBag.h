@@ -3,6 +3,7 @@
 #include "CardBagInterface.h"
 #include <list>
 #include <iostream>
+#include <vector>
 
 template <class T>
 class CardBag : CardBagInterface<T> {
@@ -64,6 +65,21 @@ public:
     };
 
     Card<T>* maxArea() override {
-        // homework
+        if (isEmpty()) {
+            return nullptr;
+        }
+
+        typename std::list<Card<T>*>::iterator first = items.begin();
+        Card<T>* maxAreaPtr = (*first);
+        T maxArea = maxAreaPtr->area();
+
+        for (typename std::list<Card<T>*>::iterator it = items.begin()++; it != items.end(); it++) {
+            if (maxArea < (*it)->area()) {
+                maxAreaPtr = *it;
+                maxArea = maxAreaPtr->area();
+            }
+
+        }
+        return maxAreaPtr;
     }
 };

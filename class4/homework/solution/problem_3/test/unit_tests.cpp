@@ -8,10 +8,67 @@
 #define FloatCircularCard CircularCard<float>
 #define FloatCardBag CardBag<float>
 
-TEST(bag_test, max_area) {
-    // homework
+TEST(bag_test, max_area_circular_card_only) {
+   CardBag<float> bag(10);
+
+   ASSERT_EQ(bag.maxArea(), nullptr);
+
+    FloatCircularCard c1(1);
+    FloatCircularCard c2(8);
+    FloatCircularCard c3(2);
+
+    bag.add(&c1);
+    bag.add(&c2);
+    bag.add(&c3);
+
+    ASSERT_EQ(bag.maxArea(), &c2);
 }
 
+TEST(bag_test, max_area_mixed_card_different_area) {
+    CardBag<float> bag(10);
+
+    FloatRectangularCard r1(4, 3);
+    FloatRectangularCard r2(8, 4.5);
+    FloatCircularCard c1(9);
+    FloatCircularCard c2(2);
+
+    bag.add(&r1);
+    bag.add(&c1);
+    bag.add(&r2);
+    bag.add(&c2);
+
+    ASSERT_EQ(bag.maxArea(), &c1);
+}
+
+TEST(bag_test, max_area_mixed_card_with_dup_area) {
+    CardBag<float> bag(10);
+
+    FloatRectangularCard r1(4, 3);
+    FloatRectangularCard r2(PI, 100);
+    FloatCircularCard c1(10);
+    FloatCircularCard c2(1);
+
+    bag.add(&r1);
+    bag.add(&c1);
+    bag.add(&c2);
+    bag.add(&r2);
+
+    ASSERT_EQ(bag.maxArea(), &c1);
+}
+
+TEST(bag_test, max_area_rectangular_card_only) {
+    CardBag<float> bag(10);
+
+    FloatRectangularCard r1(1, 2.1);
+    FloatRectangularCard r2(4, 3);
+    FloatRectangularCard r3(8, 4.5);
+
+    bag.add(&r1);
+    bag.add(&r2);
+    bag.add(&r3);
+
+    ASSERT_EQ(bag.maxArea(), &r3);
+}
 
 TEST(area_test, rect_area) {
     FloatRectangularCard rect(5, 3);
