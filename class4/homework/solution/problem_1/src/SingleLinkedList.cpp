@@ -56,7 +56,19 @@ std::vector<T> SingleLinkedList<T>::toVector() const {
 
 template <class T>
 void SingleLinkedList<T>::reverse_iterative() {
-    // homework
+    if (head->next == nullptr || head->next->next == nullptr) {
+        return;
+    }
+
+    ListNode<T> *p1 = head->next;
+    ListNode<T> *p2 = p1->next;
+
+    while (p2 != nullptr) {
+        p1->next = p2->next;
+        p2->next = head->next;
+        head->next = p2;
+        p2 = p1->next;
+    }
 }
 
 template <class T>
@@ -75,7 +87,14 @@ bool SingleLinkedList<T>::equal(SingleLinkedList &otherList) {
 
 template <class T>
 SingleLinkedList<T>::SingleLinkedList(SingleLinkedList &list) {
-    // homework
+    head = new ListNode<T>();
+    ListNode<T>* p0 = head;
+    ListNode<T>* p1 = list.head;
+    while (p1->next!= nullptr) {
+        p0->next = new ListNode<T>(p1->next->val);
+        p0 = p0->next;
+        p1 = p1->next;
+    }
 }
 
 template <class T>

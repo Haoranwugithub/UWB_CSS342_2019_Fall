@@ -151,8 +151,27 @@ TEST(sll_test, remove_zero_and_one) {
 }
 
 TEST(sll_test, constructor) {
-    // homework
+    SingleLinkedList<int> list;
 
+    SingleLinkedList<int> newList0(list);
+    ASSERT_EQ(newList0.size(), 0);
+
+    list.append(1);
+    std::vector<int> answer{1};
+    SingleLinkedList<int> newList1(list);
+    ASSERT_TRUE(newList1.toVector()==answer);
+    list.remove(1); // verify list node was actually copied
+    ASSERT_TRUE(newList1.toVector()==answer);
+
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    answer.push_back(2);
+    answer.push_back(3);
+    SingleLinkedList<int> newList2(list);
+    ASSERT_TRUE(newList2.toVector()==answer);
+    list.remove(2); // verify list node was actually copied
+    ASSERT_TRUE(newList2.toVector()==answer);
 }
 
 TEST(sll_test, test_equal) {
@@ -188,7 +207,6 @@ bool test_reverse_iterative_n(int n) {
     }
 
     list.reverse_iterative();
-
     return list.equal(revList);
 }
 
