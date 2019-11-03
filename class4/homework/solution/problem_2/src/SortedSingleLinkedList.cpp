@@ -90,7 +90,6 @@ void SortedSingleLinkedList<T>::merge(SortedSingleLinkedList & otherList) {
 
 // this version would take the node from the other list instead of creating new node.
 // as a result after the merge the other list would be empty
-/*
 template<class T>
 void SortedSingleLinkedList<T>::evilMerge(SortedSingleLinkedList & otherList) {
     ListNode<T>* pCurr = head;
@@ -108,4 +107,3 @@ void SortedSingleLinkedList<T>::evilMerge(SortedSingleLinkedList & otherList) {
         pCurr->next = newNode;
     }
 }
-*/
