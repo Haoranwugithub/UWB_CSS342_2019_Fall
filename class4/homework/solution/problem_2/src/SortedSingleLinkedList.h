@@ -24,6 +24,7 @@ public:
 
     void insert(T);
     void merge(SortedSingleLinkedList &);
+    void evilMerge(SortedSingleLinkedList &);
 };
 
 #include "SortedSingleLinkedList.cpp"

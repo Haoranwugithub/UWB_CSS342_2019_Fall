@@ -51,6 +51,37 @@ TEST(sll_test, insert) {
     ASSERT_TRUE(list1.toVector()==answer1);
 }
 
+void verifyEvilMergeCase(const std::vector<int>& curr, const std::vector<int>& other, const std::vector<int>& answer) {
+    SortedSingleLinkedList<int> currList;
+    for (int i=0; i<curr.size(); i++) {
+        currList.insert(curr[i]);
+    }
+    SortedSingleLinkedList<int> otherList;
+    for (int i=0; i<other.size(); i++) {
+        otherList.insert(other[i]);
+    }
+
+    currList.evilMerge(otherList);
+
+    ASSERT_TRUE(currList.toVector()==answer);
+
+    ASSERT_EQ(otherList.size(), 0);
+}
+
+// this tests the case if merge takes and removes node from the other list
+TEST(sll_test, evil_merge) {
+    verifyEvilMergeCase(std::vector<int>{}, std::vector<int>{}, std::vector<int>{});
+
+    verifyEvilMergeCase(std::vector<int>{1, 3},
+                    std::vector<int>{2, 4}, std::vector<int>{1, 2, 3, 4});
+
+    verifyEvilMergeCase(std::vector<int>{6, 7, 8},
+                    std::vector<int>{4, 5}, std::vector<int>{4, 5, 6, 7, 8});
+
+    verifyEvilMergeCase(std::vector<int>{3, 3, 8},
+                    std::vector<int>{2, 5}, std::vector<int>{2, 3, 3, 5, 8});
+}
+
 void verifyMergeCase(const std::vector<int>& curr, const std::vector<int>& other, const std::vector<int>& answer) {
     SortedSingleLinkedList<int> currList;
     for (int i=0; i<curr.size(); i++) {
