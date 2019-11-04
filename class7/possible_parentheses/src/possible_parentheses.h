@@ -1,15 +1,15 @@
 #include <iostream>
 #include <vector>
 
+# define MAX_SIZE 100
+
+
 void _possibleParenthesis(int pos, int n, int open, int close)
 {
-    static std::vector<char> str;
+    static char str[MAX_SIZE];
 
     if(close == n) {
-        for (int i=0; i<str.size(); i++) {
-            printf("%c ", str[i]);
-        }
-        printf("\n");
+        printf("%s\n", str);
         return;
     }
 
