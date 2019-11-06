@@ -25,4 +25,4 @@ For example:
 ### 2. (15pt) Write unit tests in ***test/HomeworkTest.cpp*** for your reverse_stack_recursively(Stack<int> &) in task 1 to verify it works correctly.
 All the above cases should be verified.
     
-### 2. (5pt) If you can implement task 1 without using another stack object and pass all the tests in task 2
+### 3. (5pt) If you can implement task 1 without using another stack object and pass all the tests in task 2
