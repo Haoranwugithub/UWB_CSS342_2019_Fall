@@ -13,6 +13,3 @@ TEST(test_recursive, 3) {
     possibleParenthesis(3);
 }
 
-TEST(test_recursive, 10) {
-    possibleParenthesis(10);
-}
