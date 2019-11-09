@@ -2,7 +2,7 @@
 
 Use folder ```problem_1```.
 
-In the class we have discussed the problem of outputing all valid parentheses of size N. The code we saw in class is [here](https://github.com/pdgetrf/UWB_CSS342_2019_Fall/tree/master/class7/possible_parentheses). This code is good for demo but it's not completed with proper tests. The task of this problem is to finish up the project. 
+In the class we have discussed the problem of outputing all valid parentheses of size N. The code we saw in class is [here](https://github.com/pdgetrf/UWB_CSS342_2019_Fall/tree/master/class7/possible_parentheses). That code is good for demo but it's not completed with proper tests. The task of this problem is to finish up the project. 
 
 You could choose to follow the in-class demo code, or use your own implementation. **The only requirement is to use backtracking.**
 
