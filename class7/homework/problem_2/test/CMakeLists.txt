@@ -1,4 +1,4 @@
-add_executable(binary_tree_tests main.cpp BinarySearchTest.cpp)
+add_executable(binary_tree_tests main.cpp BinaryTreeTest.cpp)
 
 include_directories(${CMAKE_LIBRARY_PATH})
 link_directories(${LIBRARY_OUTPUT_PATH})
