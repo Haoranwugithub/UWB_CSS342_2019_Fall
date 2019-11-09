@@ -14,6 +14,6 @@ Please follow the description of problem 1-2 in their own folders.
 
 The submission of this homework will be your git repo urls to both problems. Follow what you did last homework with github repositories. 
 1. Create repositories for problem 1 and problem 2 respectively in your github account. 
-2. Clean up your code once you are ready to submit, and push your code to the repositories of problem 1 and problem 2. 
+2. Clean up your code once you are ready to submit, and push your code to the repositories of problem 1 and 2. 
 3. Send a text file via Canvas as you submission with the urls of your both repositories. 
 4. No more updates after the due date. You will receive **zero** points if github shows you have newer updates/commits after due date and time.
