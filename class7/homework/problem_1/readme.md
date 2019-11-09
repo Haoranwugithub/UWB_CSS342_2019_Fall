@@ -2,7 +2,7 @@
 
 Use folder ```problem_1```.
 
-In the class we have discussed the problem of outputing all valid parentheses of size N. The code we saw in class is [here](https://github.com/pdgetrf/UWB_CSS342_2019_Fall/tree/master/class7/possible_parentheses). This code is good for demo but it's not completed with proper tests. The task of this problem is to finish the project. 
+In the class we have discussed the problem of outputing all valid parentheses of size N. The code we saw in class is [here](https://github.com/pdgetrf/UWB_CSS342_2019_Fall/tree/master/class7/possible_parentheses). This code is good for demo but it's not completed with proper tests. The task of this problem is to finish the project. You could choose to follow the in-class demo code, or use your own implementation. But using backtracking must be used.
 
 
 ### 1. (10pt) Rewrite the possibleParenthesis function with the following signature:
@@ -27,4 +27,4 @@ For example
 "{{{}}}"
 
 
-### 2. (10pt) Write unit tests to verify your possibleParenthesis. You need to at least verify the cases of n being zero to four.
+### 2. (10pt) Write unit tests to verify your possibleParenthesis. You need to at least verify the cases of n being zero to five.
