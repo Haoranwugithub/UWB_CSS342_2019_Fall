@@ -1,13 +1,19 @@
 * Info:
     - Assigned: 10/8/2019
     - Due: **11/16/2019 Saturday 11:59pm**
-    - Submission via Canvas
+    - Submission via Canvas. 
     - Your code will be graded on my Ubuntu Linux.  **Before** submitting your work, make sure your code works on this platform especially if you code on another platform like Windows. Simple rule of judgement: If *make* does not produce an executable (compiler warning is ok) for that problem, it's considered as **DNC(Does Not Compile)** for this problem. Starting from the next homework, you will loose **ALL** of the points for that problem if your code does not compile. 
     - Your work will be graded as following:
         - compiles: **-5pt for code that does not compile**
         - correct: pass all tests, sufficient test cases
         - no memory leak: run valgrind on your executable and "definitely lost" should be "0 bytes in 0 blocks". **You will loose 5 pts** for memory leak in each of the following problems
        
-The homework is in **UWB_CSS342_2019_Fall/class7/homework/**. 
+The homework is in UWB_CSS342_2019_Fall/class7/homework. 
 
-Please follow the description of problem 1-3 in their own folders.
+Please follow the description of problem 1-2 in their own folders.
+
+The submission of this homework will be your git repo urls to both problems. Follow what you did last homework with github repositories. 
+1. Create repositories for problem 1 and problem 2 respectively in your github account. 
+2. Clean up your code once you are ready to submit, and push your code to the repositories of problem 1 and problem 2. 
+3. Send a text file via Canvas as you submission with the urls of your both repositories. 
+4. No more updates after the due date. You will receive **zero** points if github shows you have newer updates/commits after due date and time.
