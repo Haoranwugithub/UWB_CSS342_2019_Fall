@@ -27,6 +27,30 @@ public:
     BinaryTree(TreeNode<T>* root) : root(root) {
     }
 
+    bool contains(T val) override {
+        // not implemented yet
+        return false;
+    }
+
+    void traverseInOrder() override {
+        // homework, to be done iteratively
+    }
+
+    void traversePreOrder() override {
+        // don't bother
+    }
+    void traversePostOrder() override {
+        // homework, to be done iteratively
+    }
+
+    virtual ~BinaryTree() {
+        // homework
+    }
+
+    T LCA(T node1, T node2) {
+        // homework
+    }
+
     bool add(const T &) override {
         // not implemented yet
     }
@@ -35,49 +59,8 @@ public:
         // not implemented yet
     }
 
-
     int height() override {
         return height(root);
     }
 
-    bool contains(T val) override {
-        // not implemented yet
-        return false;
-    }
-
-    void traverseInOrder() override {
-        // not implemented yet
-    }
-
-    void traversePreOrder() override {
-        // not implemented yet
-    }
-    void traversePostOrder() override {
-        // not implemented yet
-    }
-
-    virtual ~BinaryTree() {
-        LinkedStack<TreeNode<T>*> stack;
-
-        if (root == nullptr) {
-            return;
-        }
-
-        stack.push(root);
-
-        while (!stack.isEmpty()) {
-            TreeNode<T> *node = stack.peek();
-            stack.pop();
-
-            if (node->right != nullptr) {
-                stack.push(node->right);
-            }
-
-            if (node->left != nullptr) {
-                stack.push(node->left);
-            }
-
-            delete node;
-        }
-    }
 };
