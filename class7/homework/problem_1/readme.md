@@ -2,7 +2,9 @@
 
 Use folder ```problem_1```.
 
-In the class we have discussed the problem of outputing all valid parentheses of size N. The code we saw in class is [here](https://github.com/pdgetrf/UWB_CSS342_2019_Fall/tree/master/class7/possible_parentheses). This code is good for demo but it's not completed with proper tests. The task of this problem is to finish the project. You could choose to follow the in-class demo code, or use your own implementation. But using backtracking must be used.
+In the class we have discussed the problem of outputing all valid parentheses of size N. The code we saw in class is [here](https://github.com/pdgetrf/UWB_CSS342_2019_Fall/tree/master/class7/possible_parentheses). This code is good for demo but it's not completed with proper tests. The task of this problem is to finish up the project. 
+
+You could choose to follow the in-class demo code, or use your own implementation. **The only requirement is to use backtracking.**
 
 
 ### 1. (10pt) Rewrite the possibleParenthesis function with the following signature:
@@ -17,14 +19,14 @@ void possibleParenthesis(int n, std::list<std::string> & result)
 
 For example
 - when n = 1, *result* will consist of only 1 string: "{}"
-- when n = 2, *result* will consist of 2 strings: '{}{}' and "{{}}", and order of these two strings in the list doesn't matter
+- when n = 2, *result* will consist of 2 strings: '{}{}' and "{{}}"
 - when n = 3, *result* will contain the following 5 strings:
-
 "{}{}{}", 
 "{}{{}}",
 "{{}}{}",
 "{{}{}}",
 "{{{}}}"
 
+Order of each string in the list does not matter.
 
 ### 2. (10pt) Write unit tests to verify your possibleParenthesis. You need to at least verify the cases of n being zero to five.
