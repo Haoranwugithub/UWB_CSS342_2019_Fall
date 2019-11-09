@@ -51,6 +51,12 @@ LCA(8, 6) = 4
 LCA(3, 2) = 4
 LCA(8, 10) = -1
 
-You can assume the tree only contain positive integers, and there are no duplicated numbers in the tree. The function will return -1 when LCA of the two nodes does not exist.
+You can assume the tree only contain positive integers, and there are no duplicated numbers in the tree. The function will return -1 when LCA of the two nodes does not exist. The following is given in BinaryTree.h
+
+```c++
+T LCA(T node1, T node2) {
+    // homework
+}
+```
 
 Please add unit test with the above tree and examples as test cases. 
