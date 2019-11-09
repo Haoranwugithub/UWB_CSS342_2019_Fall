@@ -43,13 +43,13 @@ For example, with the following tree
    /  \   / \
   7   3  2   9
 ```
-LCA(4, 4) = 4
-LCA(7, 7) = 7
-LCA(7, 3) = 8
-LCA(7, 8) = 8
-LCA(8, 6) = 4
-LCA(3, 2) = 4
-LCA(8, 10) = -1
+- LCA(4, 4) = 4
+- LCA(7, 7) = 7
+- LCA(7, 3) = 8
+- LCA(7, 8) = 8
+- LCA(8, 6) = 4
+- LCA(3, 2) = 4
+- LCA(8, 10) = -1
 
 You can assume the tree only contain positive integers, and there are no duplicated numbers in the tree. The function will return -1 when LCA of the two nodes does not exist. The following is given in BinaryTree.h
 
