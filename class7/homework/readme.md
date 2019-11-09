@@ -26,3 +26,5 @@ The submission of this homework will be your github repositories urls to both pr
 4. No more updates after the due date. You will receive **zero** points if github shows you have newer updates/commits after due date and time.
 
 The goal of this is to let you use git and github to track and backup your work. With this any dead machine incident will not be accepted as reason of late homework.
+
+**BONUS POINT: 10pt** if you actually use git and github to work on this homework. This means you regularly commit local changes (on your laptop or desktop) and also regular push your code to github. All these can be evidenced by github history.
