@@ -8,7 +8,7 @@ void showResult(std::list<std::string> & result) {
 };
 TEST(test_recursive, 0) {
     std::list<std::string> result;
-    possibleParenthesis(2, result);
+    possibleParenthesis(0, result);
 
     // homework: add verification
 }
